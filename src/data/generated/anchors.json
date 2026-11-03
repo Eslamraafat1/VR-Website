@@ -1,0 +1,700 @@
+{
+  "entrance": {
+    "front": {
+      "yaw": 100,
+      "pitch": -8
+    },
+    "back": {
+      "yaw": 0,
+      "pitch": -8
+    },
+    "ent-l": {
+      "yaw": 100,
+      "pitch": -8
+    },
+    "ent-l#0": {
+      "yaw": 100,
+      "pitch": -8
+    },
+    "ent-l#1": {
+      "yaw": 100,
+      "pitch": -8
+    },
+    "ent-l#2": {
+      "yaw": 100,
+      "pitch": -8
+    },
+    "ent-l@sign": {
+      "yaw": 100,
+      "pitch": -8
+    },
+    "ent-r": {
+      "yaw": 100,
+      "pitch": -8
+    },
+    "ent-r#0": {
+      "yaw": 100,
+      "pitch": -8
+    },
+    "ent-r#1": {
+      "yaw": 100,
+      "pitch": -8
+    },
+    "ent-r#2": {
+      "yaw": 100,
+      "pitch": -8
+    },
+    "ent-r@sign": {
+      "yaw": 100,
+      "pitch": -8
+    }
+  },
+  "atrium": {
+    "front": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "back": {
+      "yaw": 165,
+      "pitch": -8
+    },
+    "lift": {
+      "yaw": -125,
+      "pitch": -38
+    },
+    "fashion-gate": {
+      "yaw": 25,
+      "pitch": -6
+    },
+    "electronics-gate": {
+      "yaw": 130,
+      "pitch": -8
+    },
+    "ped0": {
+      "yaw": -68,
+      "pitch": 30
+    },
+    "lift#0": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "lift#1": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "lift#2": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "lift@sign": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "atr-l": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "atr-l#0": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "atr-l#1": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "atr-l#2": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "atr-l@sign": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "fashion-gate#0": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "fashion-gate#1": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "fashion-gate#2": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "fashion-gate@sign": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "electronics-gate#0": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "electronics-gate#1": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "electronics-gate#2": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "electronics-gate@sign": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "atr-r": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "atr-r#0": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "atr-r#1": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "atr-r#2": {
+      "yaw": -52,
+      "pitch": -6
+    },
+    "atr-r@sign": {
+      "yaw": -52,
+      "pitch": -6
+    }
+  },
+  "fashion": {
+    "front": {
+      "yaw": 0,
+      "pitch": -6
+    },
+    "back": {
+      "yaw": -178,
+      "pitch": -4
+    },
+    "ped0": {
+      "yaw": 0,
+      "pitch": 22
+    },
+    "atelier-noir": {
+      "yaw": -122,
+      "pitch": 2
+    },
+    "atelier-noir@sign": {
+      "yaw": -122,
+      "pitch": 18
+    },
+    "atelier-noir#0": {
+      "yaw": -130,
+      "pitch": 2
+    },
+    "atelier-noir#1": {
+      "yaw": -122,
+      "pitch": 2
+    },
+    "atelier-noir#2": {
+      "yaw": -114,
+      "pitch": 2
+    },
+    "haute-line": {
+      "yaw": -50,
+      "pitch": 2
+    },
+    "haute-line@sign": {
+      "yaw": -50,
+      "pitch": 20
+    },
+    "haute-line#0": {
+      "yaw": -58,
+      "pitch": 2
+    },
+    "haute-line#1": {
+      "yaw": -50,
+      "pitch": 2
+    },
+    "haute-line#2": {
+      "yaw": -42,
+      "pitch": 2
+    }
+  },
+  "electronics": {
+    "front": {
+      "yaw": 0,
+      "pitch": -8
+    },
+    "back": {
+      "yaw": 0,
+      "pitch": -10
+    },
+    "ped0": {
+      "yaw": -125,
+      "pitch": 6
+    },
+    "orbit-tech": {
+      "yaw": 90,
+      "pitch": -12
+    },
+    "orbit-tech@sign": {
+      "yaw": 90,
+      "pitch": 12
+    },
+    "orbit-tech#0": {
+      "yaw": 70,
+      "pitch": -12
+    },
+    "orbit-tech#1": {
+      "yaw": 90,
+      "pitch": -12
+    },
+    "orbit-tech#2": {
+      "yaw": 110,
+      "pitch": -12
+    },
+    "aura-audio": {
+      "yaw": -56,
+      "pitch": -4
+    },
+    "aura-audio@sign": {
+      "yaw": -56,
+      "pitch": 10
+    },
+    "aura-audio#0": {
+      "yaw": -66,
+      "pitch": -4
+    },
+    "aura-audio#1": {
+      "yaw": -56,
+      "pitch": -4
+    },
+    "aura-audio#2": {
+      "yaw": -46,
+      "pitch": -4
+    }
+  },
+  "luxury": {
+    "front": {
+      "yaw": 0,
+      "pitch": -8
+    },
+    "back": {
+      "yaw": 170,
+      "pitch": -8
+    },
+    "cafe-gate": {
+      "yaw": -76,
+      "pitch": -10
+    },
+    "ped0": {
+      "yaw": 116,
+      "pitch": 32
+    },
+    "velora": {
+      "yaw": -14,
+      "pitch": -10
+    },
+    "velora@sign": {
+      "yaw": -14,
+      "pitch": 20
+    },
+    "velora#0": {
+      "yaw": -26,
+      "pitch": -10
+    },
+    "velora#1": {
+      "yaw": -14,
+      "pitch": -10
+    },
+    "velora#2": {
+      "yaw": -2,
+      "pitch": -10
+    },
+    "velora-lounge": {
+      "yaw": 86,
+      "pitch": -2
+    },
+    "velora-lounge@sign": {
+      "yaw": 86,
+      "pitch": 22
+    },
+    "velora-lounge#0": {
+      "yaw": 76,
+      "pitch": -2
+    },
+    "velora-lounge#1": {
+      "yaw": 86,
+      "pitch": -2
+    },
+    "velora-lounge#2": {
+      "yaw": 96,
+      "pitch": -2
+    },
+    "cafe-gate#0": {
+      "yaw": 0,
+      "pitch": -8
+    },
+    "cafe-gate#1": {
+      "yaw": 0,
+      "pitch": -8
+    },
+    "cafe-gate#2": {
+      "yaw": 0,
+      "pitch": -8
+    },
+    "cafe-gate@sign": {
+      "yaw": 0,
+      "pitch": -8
+    }
+  },
+  "cafe": {
+    "front": {
+      "yaw": 0,
+      "pitch": -8
+    },
+    "back": {
+      "yaw": 70,
+      "pitch": -6
+    },
+    "ped0": {
+      "yaw": 36,
+      "pitch": 30
+    },
+    "ped1": {
+      "yaw": -56,
+      "pitch": 6
+    },
+    "cafe-lumen": {
+      "yaw": 34,
+      "pitch": 0
+    },
+    "cafe-lumen@sign": {
+      "yaw": 34,
+      "pitch": 14
+    },
+    "cafe-lumen#0": {
+      "yaw": 20,
+      "pitch": 0
+    },
+    "cafe-lumen#1": {
+      "yaw": 34,
+      "pitch": 0
+    },
+    "cafe-lumen#2": {
+      "yaw": 48,
+      "pitch": 0
+    },
+    "cafe-seat": {
+      "yaw": -140,
+      "pitch": -22
+    },
+    "cafe-seat@sign": {
+      "yaw": -140,
+      "pitch": 14
+    },
+    "cafe-seat#0": {
+      "yaw": -152,
+      "pitch": -22
+    },
+    "cafe-seat#1": {
+      "yaw": -140,
+      "pitch": -22
+    },
+    "cafe-seat#2": {
+      "yaw": -128,
+      "pitch": -22
+    }
+  },
+  "beauty": {
+    "front": {
+      "yaw": -34,
+      "pitch": -4
+    },
+    "back": {
+      "yaw": -34,
+      "pitch": -4
+    },
+    "lift-1": {
+      "yaw": 160,
+      "pitch": -4
+    },
+    "ped0": {
+      "yaw": -150,
+      "pitch": -20
+    },
+    "maison-eclat": {
+      "yaw": -92,
+      "pitch": 0
+    },
+    "maison-eclat@sign": {
+      "yaw": -92,
+      "pitch": 18
+    },
+    "maison-eclat#0": {
+      "yaw": -100,
+      "pitch": 0
+    },
+    "maison-eclat#1": {
+      "yaw": -92,
+      "pitch": 0
+    },
+    "maison-eclat#2": {
+      "yaw": -84,
+      "pitch": 0
+    },
+    "lift-1#0": {
+      "yaw": -34,
+      "pitch": -4
+    },
+    "lift-1#1": {
+      "yaw": -34,
+      "pitch": -4
+    },
+    "lift-1#2": {
+      "yaw": -34,
+      "pitch": -4
+    },
+    "lift-1@sign": {
+      "yaw": -34,
+      "pitch": -4
+    },
+    "beauty-r": {
+      "yaw": -34,
+      "pitch": -4
+    },
+    "beauty-r#0": {
+      "yaw": -34,
+      "pitch": -4
+    },
+    "beauty-r#1": {
+      "yaw": -34,
+      "pitch": -4
+    },
+    "beauty-r#2": {
+      "yaw": -34,
+      "pitch": -4
+    },
+    "beauty-r@sign": {
+      "yaw": -34,
+      "pitch": -4
+    }
+  },
+  "home": {
+    "front": {
+      "yaw": 125,
+      "pitch": -12
+    },
+    "back": {
+      "yaw": -160,
+      "pitch": -8
+    },
+    "ped0": {
+      "yaw": -113,
+      "pitch": 8
+    },
+    "form-living": {
+      "yaw": -20,
+      "pitch": -6
+    },
+    "form-living@sign": {
+      "yaw": -20,
+      "pitch": 16
+    },
+    "form-living#0": {
+      "yaw": -32,
+      "pitch": -6
+    },
+    "form-living#1": {
+      "yaw": -20,
+      "pitch": -6
+    },
+    "form-living#2": {
+      "yaw": -8,
+      "pitch": -6
+    },
+    "home-l": {
+      "yaw": 125,
+      "pitch": -12
+    },
+    "home-l#0": {
+      "yaw": 125,
+      "pitch": -12
+    },
+    "home-l#1": {
+      "yaw": 125,
+      "pitch": -12
+    },
+    "home-l#2": {
+      "yaw": 125,
+      "pitch": -12
+    },
+    "home-l@sign": {
+      "yaw": 125,
+      "pitch": -12
+    }
+  },
+  "sports": {
+    "front": {
+      "yaw": -56,
+      "pitch": -18
+    },
+    "back": {
+      "yaw": 150,
+      "pitch": -22
+    },
+    "ped0": {
+      "yaw": -98,
+      "pitch": 4
+    },
+    "kinetic": {
+      "yaw": 48,
+      "pitch": -18
+    },
+    "kinetic@sign": {
+      "yaw": 48,
+      "pitch": 4
+    },
+    "kinetic#0": {
+      "yaw": 40,
+      "pitch": -18
+    },
+    "kinetic#1": {
+      "yaw": 48,
+      "pitch": -18
+    },
+    "kinetic#2": {
+      "yaw": 56,
+      "pitch": -18
+    },
+    "sports-r": {
+      "yaw": -56,
+      "pitch": -18
+    },
+    "sports-r#0": {
+      "yaw": -56,
+      "pitch": -18
+    },
+    "sports-r#1": {
+      "yaw": -56,
+      "pitch": -18
+    },
+    "sports-r#2": {
+      "yaw": -56,
+      "pitch": -18
+    },
+    "sports-r@sign": {
+      "yaw": -56,
+      "pitch": -18
+    }
+  },
+  "dining": {
+    "front": {
+      "yaw": 40,
+      "pitch": -10
+    },
+    "back": {
+      "yaw": -130,
+      "pitch": -12
+    },
+    "ped0": {
+      "yaw": -168,
+      "pitch": 5
+    },
+    "ped1": {
+      "yaw": 110,
+      "pitch": 24
+    },
+    "nomad-table": {
+      "yaw": -20,
+      "pitch": -12
+    },
+    "nomad-table@sign": {
+      "yaw": -20,
+      "pitch": 16
+    },
+    "nomad-table#0": {
+      "yaw": -36,
+      "pitch": -12
+    },
+    "nomad-table#1": {
+      "yaw": -20,
+      "pitch": -12
+    },
+    "nomad-table#2": {
+      "yaw": -4,
+      "pitch": -12
+    },
+    "dining-l": {
+      "yaw": 40,
+      "pitch": -10
+    },
+    "dining-l#0": {
+      "yaw": 40,
+      "pitch": -10
+    },
+    "dining-l#1": {
+      "yaw": 40,
+      "pitch": -10
+    },
+    "dining-l#2": {
+      "yaw": 40,
+      "pitch": -10
+    },
+    "dining-l@sign": {
+      "yaw": 40,
+      "pitch": -10
+    }
+  },
+  "lounge": {
+    "front": {
+      "yaw": 0,
+      "pitch": -8
+    },
+    "back": {
+      "yaw": -104,
+      "pitch": -4
+    },
+    "ped0": {
+      "yaw": -81,
+      "pitch": 14
+    },
+    "pulse-arcade": {
+      "yaw": 44,
+      "pitch": -8
+    },
+    "pulse-arcade@sign": {
+      "yaw": 44,
+      "pitch": 24
+    },
+    "pulse-arcade#0": {
+      "yaw": 30,
+      "pitch": -8
+    },
+    "pulse-arcade#1": {
+      "yaw": 44,
+      "pitch": -8
+    },
+    "pulse-arcade#2": {
+      "yaw": 58,
+      "pitch": -8
+    },
+    "lounge-r": {
+      "yaw": 0,
+      "pitch": -8
+    },
+    "lounge-r#0": {
+      "yaw": 0,
+      "pitch": -8
+    },
+    "lounge-r#1": {
+      "yaw": 0,
+      "pitch": -8
+    },
+    "lounge-r#2": {
+      "yaw": 0,
+      "pitch": -8
+    },
+    "lounge-r@sign": {
+      "yaw": 0,
+      "pitch": -8
+    }
+  }
+}

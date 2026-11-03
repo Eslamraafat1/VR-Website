@@ -1,0 +1,646 @@
+{
+  "generated": "2026-11-02T15:18:21.090Z",
+  "note": "All files are temporary demo assets. Replace with real client photography. | Panoramas, mall, store and campaign images are real CC0 photography (Poly Haven). Product images are real Pexels photographs (generic, not the fictional brands shown in the UI). Photos may show incidental real-world signage from the original locations.",
+  "assets": [
+    {
+      "file": "public/panoramas/entrance.jpg",
+      "category": "panorama",
+      "source": "Real 360° panorama — Poly Haven \"Rostock-Laage Airport\" by Greg Zaal (https://polyhaven.com/a/rostock_laage_airport), scene: entrance",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/entrance-thumb.jpg",
+      "category": "panorama-thumbnail",
+      "source": "Thumbnail of — Poly Haven \"Rostock-Laage Airport\" by Greg Zaal (https://polyhaven.com/a/rostock_laage_airport), scene: entrance",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/atrium.jpg",
+      "category": "panorama",
+      "source": "Real 360° panorama — Poly Haven \"Royal Esplanade\" by Greg Zaal (https://polyhaven.com/a/royal_esplanade), scene: atrium",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/atrium-thumb.jpg",
+      "category": "panorama-thumbnail",
+      "source": "Thumbnail of — Poly Haven \"Royal Esplanade\" by Greg Zaal (https://polyhaven.com/a/royal_esplanade), scene: atrium",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/fashion.jpg",
+      "category": "panorama",
+      "source": "Real 360° panorama — Poly Haven \"Leadenhall Market\" by Andreas Mischok (https://polyhaven.com/a/leadenhall_market), scene: fashion",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/fashion-thumb.jpg",
+      "category": "panorama-thumbnail",
+      "source": "Thumbnail of — Poly Haven \"Leadenhall Market\" by Andreas Mischok (https://polyhaven.com/a/leadenhall_market), scene: fashion",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/electronics.jpg",
+      "category": "panorama",
+      "source": "Real 360° panorama — Poly Haven \"Phone Shop\" by Philip Modin (https://polyhaven.com/a/phone_shop), scene: electronics",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/electronics-thumb.jpg",
+      "category": "panorama-thumbnail",
+      "source": "Thumbnail of — Poly Haven \"Phone Shop\" by Philip Modin (https://polyhaven.com/a/phone_shop), scene: electronics",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/luxury.jpg",
+      "category": "panorama",
+      "source": "Real 360° panorama — Poly Haven \"Decor Shop\" by Sergej Majboroda (https://polyhaven.com/a/decor_shop), scene: luxury",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/luxury-thumb.jpg",
+      "category": "panorama-thumbnail",
+      "source": "Thumbnail of — Poly Haven \"Decor Shop\" by Sergej Majboroda (https://polyhaven.com/a/decor_shop), scene: luxury",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/cafe.jpg",
+      "category": "panorama",
+      "source": "Real 360° panorama — Poly Haven \"Comfy Café\" by Sergej Majboroda (https://polyhaven.com/a/comfy_cafe), scene: cafe",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/cafe-thumb.jpg",
+      "category": "panorama-thumbnail",
+      "source": "Thumbnail of — Poly Haven \"Comfy Café\" by Sergej Majboroda (https://polyhaven.com/a/comfy_cafe), scene: cafe",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/beauty.jpg",
+      "category": "panorama",
+      "source": "Real 360° panorama — Poly Haven \"Ballroom\" by Sergej Majboroda (https://polyhaven.com/a/ballroom), scene: beauty",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/beauty-thumb.jpg",
+      "category": "panorama-thumbnail",
+      "source": "Thumbnail of — Poly Haven \"Ballroom\" by Sergej Majboroda (https://polyhaven.com/a/ballroom), scene: beauty",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/home.jpg",
+      "category": "panorama",
+      "source": "Real 360° panorama — Poly Haven \"Wooden Lounge\" by Greg Zaal (https://polyhaven.com/a/wooden_lounge), scene: home",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/home-thumb.jpg",
+      "category": "panorama-thumbnail",
+      "source": "Thumbnail of — Poly Haven \"Wooden Lounge\" by Greg Zaal (https://polyhaven.com/a/wooden_lounge), scene: home",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/sports.jpg",
+      "category": "panorama",
+      "source": "Real 360° panorama — Poly Haven \"Gym 01\" by Sergej Majboroda (https://polyhaven.com/a/gym_01), scene: sports",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/sports-thumb.jpg",
+      "category": "panorama-thumbnail",
+      "source": "Thumbnail of — Poly Haven \"Gym 01\" by Sergej Majboroda (https://polyhaven.com/a/gym_01), scene: sports",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/dining.jpg",
+      "category": "panorama",
+      "source": "Real 360° panorama — Poly Haven \"Warm Restaurant\" by Greg Zaal & Jarod Guest (https://polyhaven.com/a/warm_restaurant), scene: dining",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/dining-thumb.jpg",
+      "category": "panorama-thumbnail",
+      "source": "Thumbnail of — Poly Haven \"Warm Restaurant\" by Greg Zaal & Jarod Guest (https://polyhaven.com/a/warm_restaurant), scene: dining",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/lounge.jpg",
+      "category": "panorama",
+      "source": "Real 360° panorama — Poly Haven \"Billiard Hall\" by Greg Zaal & Jarod Guest (https://polyhaven.com/a/billiard_hall), scene: lounge",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/panoramas/lounge-thumb.jpg",
+      "category": "panorama-thumbnail",
+      "source": "Thumbnail of — Poly Haven \"Billiard Hall\" by Greg Zaal & Jarod Guest (https://polyhaven.com/a/billiard_hall), scene: lounge",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/mall/hero.jpg",
+      "category": "mall",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Leadenhall Market\" by Andreas Mischok (https://polyhaven.com/a/leadenhall_market), scene: fashion",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/mall/atrium.jpg",
+      "category": "mall",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Royal Esplanade\" by Greg Zaal (https://polyhaven.com/a/royal_esplanade), scene: atrium",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/mall/entrance.jpg",
+      "category": "mall",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Rostock-Laage Airport\" by Greg Zaal (https://polyhaven.com/a/rostock_laage_airport), scene: entrance",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/mall/luxury-avenue.jpg",
+      "category": "mall",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Decor Shop\" by Sergej Majboroda (https://polyhaven.com/a/decor_shop), scene: luxury",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/mall/fashion-district.jpg",
+      "category": "mall",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Leadenhall Market\" by Andreas Mischok (https://polyhaven.com/a/leadenhall_market), scene: fashion",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/mall/technology-zone.jpg",
+      "category": "mall",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Phone Shop\" by Philip Modin (https://polyhaven.com/a/phone_shop), scene: electronics",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/mall/dining-boulevard.jpg",
+      "category": "mall",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Warm Restaurant\" by Greg Zaal & Jarod Guest (https://polyhaven.com/a/warm_restaurant), scene: dining",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/mall/lifestyle-gallery.jpg",
+      "category": "mall",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Wooden Lounge\" by Greg Zaal (https://polyhaven.com/a/wooden_lounge), scene: home",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/mall/detail-skylight.jpg",
+      "category": "mall",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Leadenhall Market\" by Andreas Mischok (https://polyhaven.com/a/leadenhall_market), scene: fashion",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/mall/detail-gallery.jpg",
+      "category": "mall",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Ballroom\" by Sergej Majboroda (https://polyhaven.com/a/ballroom), scene: beauty",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/stores/atelier-noir.jpg",
+      "category": "store",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Leadenhall Market\" by Andreas Mischok (https://polyhaven.com/a/leadenhall_market), scene: fashion",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/stores/haute-line.jpg",
+      "category": "store",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Leadenhall Market\" by Andreas Mischok (https://polyhaven.com/a/leadenhall_market), scene: fashion",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/stores/orbit-tech.jpg",
+      "category": "store",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Phone Shop\" by Philip Modin (https://polyhaven.com/a/phone_shop), scene: electronics",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/stores/aura-audio.jpg",
+      "category": "store",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Phone Shop\" by Philip Modin (https://polyhaven.com/a/phone_shop), scene: electronics",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/stores/velora.jpg",
+      "category": "store",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Decor Shop\" by Sergej Majboroda (https://polyhaven.com/a/decor_shop), scene: luxury",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/stores/cafe-lumen.jpg",
+      "category": "store",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Comfy Café\" by Sergej Majboroda (https://polyhaven.com/a/comfy_cafe), scene: cafe",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/stores/maison-eclat.jpg",
+      "category": "store",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Ballroom\" by Sergej Majboroda (https://polyhaven.com/a/ballroom), scene: beauty",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/stores/form-living.jpg",
+      "category": "store",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Wooden Lounge\" by Greg Zaal (https://polyhaven.com/a/wooden_lounge), scene: home",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/stores/kinetic.jpg",
+      "category": "store",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Gym 01\" by Sergej Majboroda (https://polyhaven.com/a/gym_01), scene: sports",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/stores/nomad-table.jpg",
+      "category": "store",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Warm Restaurant\" by Greg Zaal & Jarod Guest (https://polyhaven.com/a/warm_restaurant), scene: dining",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/stores/pulse-arcade.jpg",
+      "category": "store",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Billiard Hall\" by Greg Zaal & Jarod Guest (https://polyhaven.com/a/billiard_hall), scene: lounge",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/campaigns/seasonal-edit.jpg",
+      "category": "campaign",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Leadenhall Market\" by Andreas Mischok (https://polyhaven.com/a/leadenhall_market), scene: fashion",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/campaigns/winter-tailoring.jpg",
+      "category": "campaign",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Leadenhall Market\" by Andreas Mischok (https://polyhaven.com/a/leadenhall_market), scene: fashion",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/campaigns/sound-season.jpg",
+      "category": "campaign",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Phone Shop\" by Philip Modin (https://polyhaven.com/a/phone_shop), scene: electronics",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/campaigns/gold-hour.jpg",
+      "category": "campaign",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Decor Shop\" by Sergej Majboroda (https://polyhaven.com/a/decor_shop), scene: luxury",
+      "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/noir-wool-coat.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/21835288/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/noir-leather-tote.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/23223861/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/noir-court-sneaker.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/13536939/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/haute-silk-scarf.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/36455711/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/haute-crossbody.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/27174548/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/haute-loafer.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/8159478/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/orbit-phone-x.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/27544694/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/orbit-watch-s.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/11700618/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/orbit-book-air.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/5793947/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/aura-halo-headphones.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/5269752/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/aura-orb-speaker.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/14309809/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/aura-studio-headphones.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/3394665/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/velora-solitaire-ring.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/32988751/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/velora-pearl-necklace.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/36854160/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/velora-chrono.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/5058216/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/lumen-signature-latte.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/459489/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/lumen-pastry-box.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/17939260/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/lumen-cold-brew.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/28901490/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/eclat-glow-serum.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/7796500/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/eclat-noir-perfume.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/16239693/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/eclat-velvet-cream.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/4735904/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/form-arc-chair.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/29508374/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/form-halo-lamp.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/32168984/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/form-stone-vase.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/7119222/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/kinetic-velocity-runner.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/23491456/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/kinetic-pro-bottle.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/7814989/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/kinetic-trail-pack.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/30829443/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/nomad-tasting-menu.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/29220390/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/nomad-saffron-bowl.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/16474894/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/nomad-spiced-tea.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/38958677/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/pulse-vr-headset.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/4523065/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/pulse-game-pad.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/18223728/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    },
+    {
+      "file": "public/images/products/pulse-day-pass.jpg",
+      "category": "product",
+      "source": "Photograph from Pexels — https://www.pexels.com/photo/1293260/",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "temporary": false,
+      "photographic": true
+    }
+  ]
+}

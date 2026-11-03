@@ -1,0 +1,114 @@
+{
+  "entrance": {
+    "polyhavenId": "rostock_laage_airport",
+    "name": "Rostock-Laage Airport",
+    "authors": [
+      "Greg Zaal"
+    ],
+    "source": "https://polyhaven.com/a/rostock_laage_airport",
+    "license": "CC0 1.0",
+    "src": "8192x4096"
+  },
+  "atrium": {
+    "polyhavenId": "royal_esplanade",
+    "name": "Royal Esplanade",
+    "authors": [
+      "Greg Zaal"
+    ],
+    "source": "https://polyhaven.com/a/royal_esplanade",
+    "license": "CC0 1.0",
+    "src": "8192x4096"
+  },
+  "fashion": {
+    "polyhavenId": "leadenhall_market",
+    "name": "Leadenhall Market",
+    "authors": [
+      "Andreas Mischok"
+    ],
+    "source": "https://polyhaven.com/a/leadenhall_market",
+    "license": "CC0 1.0",
+    "src": "8192x4096"
+  },
+  "electronics": {
+    "polyhavenId": "phone_shop",
+    "name": "Phone Shop",
+    "authors": [
+      "Philip Modin"
+    ],
+    "source": "https://polyhaven.com/a/phone_shop",
+    "license": "CC0 1.0",
+    "src": "8192x4096"
+  },
+  "luxury": {
+    "polyhavenId": "decor_shop",
+    "name": "Decor Shop",
+    "authors": [
+      "Sergej Majboroda"
+    ],
+    "source": "https://polyhaven.com/a/decor_shop",
+    "license": "CC0 1.0",
+    "src": "8192x4096"
+  },
+  "cafe": {
+    "polyhavenId": "comfy_cafe",
+    "name": "Comfy Café",
+    "authors": [
+      "Sergej Majboroda"
+    ],
+    "source": "https://polyhaven.com/a/comfy_cafe",
+    "license": "CC0 1.0",
+    "src": "8192x4096"
+  },
+  "beauty": {
+    "polyhavenId": "ballroom",
+    "name": "Ballroom",
+    "authors": [
+      "Sergej Majboroda"
+    ],
+    "source": "https://polyhaven.com/a/ballroom",
+    "license": "CC0 1.0",
+    "src": "8192x4096"
+  },
+  "home": {
+    "polyhavenId": "wooden_lounge",
+    "name": "Wooden Lounge",
+    "authors": [
+      "Greg Zaal"
+    ],
+    "source": "https://polyhaven.com/a/wooden_lounge",
+    "license": "CC0 1.0",
+    "src": "8192x4096"
+  },
+  "sports": {
+    "polyhavenId": "gym_01",
+    "name": "Gym 01",
+    "authors": [
+      "Sergej Majboroda"
+    ],
+    "source": "https://polyhaven.com/a/gym_01",
+    "license": "CC0 1.0",
+    "src": "8192x4096"
+  },
+  "dining": {
+    "polyhavenId": "warm_restaurant",
+    "name": "Warm Restaurant",
+    "authors": [
+      "Greg Zaal",
+      "Jarod Guest"
+    ],
+    "source": "https://polyhaven.com/a/warm_restaurant",
+    "license": "CC0 1.0",
+    "src": "8192x4096"
+  },
+  "lounge": {
+    "polyhavenId": "billiard_hall",
+    "name": "Billiard Hall",
+    "authors": [
+      "Greg Zaal",
+      "Jarod Guest"
+    ],
+    "source": "https://polyhaven.com/a/billiard_hall",
+    "license": "CC0 1.0",
+    "src": "8192x4096"
+  }
+}
