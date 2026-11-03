@@ -1,11 +1,11 @@
 {
   "entrance": {
-    "polyhavenId": "rostock_laage_airport",
-    "name": "Rostock-Laage Airport",
+    "polyhavenId": "sepulchral_chapel_rotunda",
+    "name": "Sepulchral Chapel Rotunda",
     "authors": [
-      "Greg Zaal"
+      "Andreas Mischok"
     ],
-    "source": "https://polyhaven.com/a/rostock_laage_airport",
+    "source": "https://polyhaven.com/a/sepulchral_chapel_rotunda",
     "license": "CC0 1.0",
     "src": "8192x4096"
   },
@@ -20,32 +20,32 @@
     "src": "8192x4096"
   },
   "fashion": {
-    "polyhavenId": "leadenhall_market",
-    "name": "Leadenhall Market",
+    "polyhavenId": "subway_entrance",
+    "name": "Subway Entrance",
     "authors": [
-      "Andreas Mischok"
+      "Greg Zaal"
     ],
-    "source": "https://polyhaven.com/a/leadenhall_market",
+    "source": "https://polyhaven.com/a/subway_entrance",
     "license": "CC0 1.0",
     "src": "8192x4096"
   },
   "electronics": {
-    "polyhavenId": "phone_shop",
-    "name": "Phone Shop",
+    "polyhavenId": "tv_studio",
+    "name": "TV Studio",
     "authors": [
-      "Philip Modin"
+      "Sergej Majboroda"
     ],
-    "source": "https://polyhaven.com/a/phone_shop",
+    "source": "https://polyhaven.com/a/tv_studio",
     "license": "CC0 1.0",
     "src": "8192x4096"
   },
   "luxury": {
-    "polyhavenId": "decor_shop",
-    "name": "Decor Shop",
+    "polyhavenId": "entrance_hall",
+    "name": "Entrance Hall",
     "authors": [
       "Sergej Majboroda"
     ],
-    "source": "https://polyhaven.com/a/decor_shop",
+    "source": "https://polyhaven.com/a/entrance_hall",
     "license": "CC0 1.0",
     "src": "8192x4096"
   },

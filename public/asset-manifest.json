@@ -5,7 +5,7 @@
     {
       "file": "public/panoramas/entrance.jpg",
       "category": "panorama",
-      "source": "Real 360° panorama — Poly Haven \"Rostock-Laage Airport\" by Greg Zaal (https://polyhaven.com/a/rostock_laage_airport), scene: entrance",
+      "source": "Real 360° panorama — Poly Haven \"Sepulchral Chapel Rotunda\" by Andreas Mischok (https://polyhaven.com/a/sepulchral_chapel_rotunda), scene: entrance",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -13,7 +13,7 @@
     {
       "file": "public/panoramas/entrance-thumb.jpg",
       "category": "panorama-thumbnail",
-      "source": "Thumbnail of — Poly Haven \"Rostock-Laage Airport\" by Greg Zaal (https://polyhaven.com/a/rostock_laage_airport), scene: entrance",
+      "source": "Thumbnail of — Poly Haven \"Sepulchral Chapel Rotunda\" by Andreas Mischok (https://polyhaven.com/a/sepulchral_chapel_rotunda), scene: entrance",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -37,7 +37,7 @@
     {
       "file": "public/panoramas/fashion.jpg",
       "category": "panorama",
-      "source": "Real 360° panorama — Poly Haven \"Leadenhall Market\" by Andreas Mischok (https://polyhaven.com/a/leadenhall_market), scene: fashion",
+      "source": "Real 360° panorama — Poly Haven \"Subway Entrance\" by Greg Zaal (https://polyhaven.com/a/subway_entrance), scene: fashion",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -45,7 +45,7 @@
     {
       "file": "public/panoramas/fashion-thumb.jpg",
       "category": "panorama-thumbnail",
-      "source": "Thumbnail of — Poly Haven \"Leadenhall Market\" by Andreas Mischok (https://polyhaven.com/a/leadenhall_market), scene: fashion",
+      "source": "Thumbnail of — Poly Haven \"Subway Entrance\" by Greg Zaal (https://polyhaven.com/a/subway_entrance), scene: fashion",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -53,7 +53,7 @@
     {
       "file": "public/panoramas/electronics.jpg",
       "category": "panorama",
-      "source": "Real 360° panorama — Poly Haven \"Phone Shop\" by Philip Modin (https://polyhaven.com/a/phone_shop), scene: electronics",
+      "source": "Real 360° panorama — Poly Haven \"TV Studio\" by Sergej Majboroda (https://polyhaven.com/a/tv_studio), scene: electronics",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -61,7 +61,7 @@
     {
       "file": "public/panoramas/electronics-thumb.jpg",
       "category": "panorama-thumbnail",
-      "source": "Thumbnail of — Poly Haven \"Phone Shop\" by Philip Modin (https://polyhaven.com/a/phone_shop), scene: electronics",
+      "source": "Thumbnail of — Poly Haven \"TV Studio\" by Sergej Majboroda (https://polyhaven.com/a/tv_studio), scene: electronics",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -69,7 +69,7 @@
     {
       "file": "public/panoramas/luxury.jpg",
       "category": "panorama",
-      "source": "Real 360° panorama — Poly Haven \"Decor Shop\" by Sergej Majboroda (https://polyhaven.com/a/decor_shop), scene: luxury",
+      "source": "Real 360° panorama — Poly Haven \"Entrance Hall\" by Sergej Majboroda (https://polyhaven.com/a/entrance_hall), scene: luxury",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -77,7 +77,7 @@
     {
       "file": "public/panoramas/luxury-thumb.jpg",
       "category": "panorama-thumbnail",
-      "source": "Thumbnail of — Poly Haven \"Decor Shop\" by Sergej Majboroda (https://polyhaven.com/a/decor_shop), scene: luxury",
+      "source": "Thumbnail of — Poly Haven \"Entrance Hall\" by Sergej Majboroda (https://polyhaven.com/a/entrance_hall), scene: luxury",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -181,7 +181,7 @@
     {
       "file": "public/images/mall/hero.jpg",
       "category": "mall",
-      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Leadenhall Market\" by Andreas Mischok (https://polyhaven.com/a/leadenhall_market), scene: fashion",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Ballroom\" by Sergej Majboroda (https://polyhaven.com/a/ballroom), scene: beauty",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -197,7 +197,7 @@
     {
       "file": "public/images/mall/entrance.jpg",
       "category": "mall",
-      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Rostock-Laage Airport\" by Greg Zaal (https://polyhaven.com/a/rostock_laage_airport), scene: entrance",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Sepulchral Chapel Rotunda\" by Andreas Mischok (https://polyhaven.com/a/sepulchral_chapel_rotunda), scene: entrance",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -205,7 +205,7 @@
     {
       "file": "public/images/mall/luxury-avenue.jpg",
       "category": "mall",
-      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Decor Shop\" by Sergej Majboroda (https://polyhaven.com/a/decor_shop), scene: luxury",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Entrance Hall\" by Sergej Majboroda (https://polyhaven.com/a/entrance_hall), scene: luxury",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -213,7 +213,7 @@
     {
       "file": "public/images/mall/fashion-district.jpg",
       "category": "mall",
-      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Leadenhall Market\" by Andreas Mischok (https://polyhaven.com/a/leadenhall_market), scene: fashion",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Subway Entrance\" by Greg Zaal (https://polyhaven.com/a/subway_entrance), scene: fashion",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -221,7 +221,7 @@
     {
       "file": "public/images/mall/technology-zone.jpg",
       "category": "mall",
-      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Phone Shop\" by Philip Modin (https://polyhaven.com/a/phone_shop), scene: electronics",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"TV Studio\" by Sergej Majboroda (https://polyhaven.com/a/tv_studio), scene: electronics",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -245,7 +245,7 @@
     {
       "file": "public/images/mall/detail-skylight.jpg",
       "category": "mall",
-      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Leadenhall Market\" by Andreas Mischok (https://polyhaven.com/a/leadenhall_market), scene: fashion",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Sepulchral Chapel Rotunda\" by Andreas Mischok (https://polyhaven.com/a/sepulchral_chapel_rotunda), scene: entrance",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -261,7 +261,7 @@
     {
       "file": "public/images/stores/atelier-noir.jpg",
       "category": "store",
-      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Leadenhall Market\" by Andreas Mischok (https://polyhaven.com/a/leadenhall_market), scene: fashion",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Subway Entrance\" by Greg Zaal (https://polyhaven.com/a/subway_entrance), scene: fashion",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -269,7 +269,7 @@
     {
       "file": "public/images/stores/haute-line.jpg",
       "category": "store",
-      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Leadenhall Market\" by Andreas Mischok (https://polyhaven.com/a/leadenhall_market), scene: fashion",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Subway Entrance\" by Greg Zaal (https://polyhaven.com/a/subway_entrance), scene: fashion",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -277,7 +277,7 @@
     {
       "file": "public/images/stores/orbit-tech.jpg",
       "category": "store",
-      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Phone Shop\" by Philip Modin (https://polyhaven.com/a/phone_shop), scene: electronics",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"TV Studio\" by Sergej Majboroda (https://polyhaven.com/a/tv_studio), scene: electronics",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -285,7 +285,7 @@
     {
       "file": "public/images/stores/aura-audio.jpg",
       "category": "store",
-      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Phone Shop\" by Philip Modin (https://polyhaven.com/a/phone_shop), scene: electronics",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"TV Studio\" by Sergej Majboroda (https://polyhaven.com/a/tv_studio), scene: electronics",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -293,7 +293,7 @@
     {
       "file": "public/images/stores/velora.jpg",
       "category": "store",
-      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Decor Shop\" by Sergej Majboroda (https://polyhaven.com/a/decor_shop), scene: luxury",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Entrance Hall\" by Sergej Majboroda (https://polyhaven.com/a/entrance_hall), scene: luxury",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -349,7 +349,7 @@
     {
       "file": "public/images/campaigns/seasonal-edit.jpg",
       "category": "campaign",
-      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Leadenhall Market\" by Andreas Mischok (https://polyhaven.com/a/leadenhall_market), scene: fashion",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Subway Entrance\" by Greg Zaal (https://polyhaven.com/a/subway_entrance), scene: fashion",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -357,7 +357,7 @@
     {
       "file": "public/images/campaigns/winter-tailoring.jpg",
       "category": "campaign",
-      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Leadenhall Market\" by Andreas Mischok (https://polyhaven.com/a/leadenhall_market), scene: fashion",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Entrance Hall\" by Sergej Majboroda (https://polyhaven.com/a/entrance_hall), scene: luxury",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -365,7 +365,7 @@
     {
       "file": "public/images/campaigns/sound-season.jpg",
       "category": "campaign",
-      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Phone Shop\" by Philip Modin (https://polyhaven.com/a/phone_shop), scene: electronics",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"TV Studio\" by Sergej Majboroda (https://polyhaven.com/a/tv_studio), scene: electronics",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true
@@ -373,7 +373,7 @@
     {
       "file": "public/images/campaigns/gold-hour.jpg",
       "category": "campaign",
-      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Decor Shop\" by Sergej Majboroda (https://polyhaven.com/a/decor_shop), scene: luxury",
+      "source": "Rectilinear crop rendered from the real panorama — Poly Haven \"Entrance Hall\" by Sergej Majboroda (https://polyhaven.com/a/entrance_hall), scene: luxury",
       "license": "CC0 1.0 (public domain dedication) — attribution not required, given as courtesy",
       "temporary": false,
       "photographic": true

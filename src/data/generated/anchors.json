@@ -1,52 +1,52 @@
 {
   "entrance": {
     "front": {
-      "yaw": 100,
-      "pitch": -8
+      "yaw": 0,
+      "pitch": -6
     },
     "back": {
-      "yaw": 0,
-      "pitch": -8
+      "yaw": 180,
+      "pitch": -6
     },
     "ent-l": {
-      "yaw": 100,
-      "pitch": -8
+      "yaw": 0,
+      "pitch": -6
     },
     "ent-l#0": {
-      "yaw": 100,
-      "pitch": -8
+      "yaw": 0,
+      "pitch": -6
     },
     "ent-l#1": {
-      "yaw": 100,
-      "pitch": -8
+      "yaw": 0,
+      "pitch": -6
     },
     "ent-l#2": {
-      "yaw": 100,
-      "pitch": -8
+      "yaw": 0,
+      "pitch": -6
     },
     "ent-l@sign": {
-      "yaw": 100,
-      "pitch": -8
+      "yaw": 0,
+      "pitch": -6
     },
     "ent-r": {
-      "yaw": 100,
-      "pitch": -8
+      "yaw": 0,
+      "pitch": -6
     },
     "ent-r#0": {
-      "yaw": 100,
-      "pitch": -8
+      "yaw": 0,
+      "pitch": -6
     },
     "ent-r#1": {
-      "yaw": 100,
-      "pitch": -8
+      "yaw": 0,
+      "pitch": -6
     },
     "ent-r#2": {
-      "yaw": 100,
-      "pitch": -8
+      "yaw": 0,
+      "pitch": -6
     },
     "ent-r@sign": {
-      "yaw": 100,
-      "pitch": -8
+      "yaw": 0,
+      "pitch": -6
     }
   },
   "atrium": {
@@ -166,55 +166,55 @@
   "fashion": {
     "front": {
       "yaw": 0,
-      "pitch": -6
+      "pitch": -8
     },
     "back": {
-      "yaw": -178,
+      "yaw": -76,
       "pitch": -4
     },
     "ped0": {
-      "yaw": 0,
-      "pitch": 22
+      "yaw": 122,
+      "pitch": 40
     },
     "atelier-noir": {
-      "yaw": -122,
-      "pitch": 2
+      "yaw": 20,
+      "pitch": -2
     },
     "atelier-noir@sign": {
-      "yaw": -122,
-      "pitch": 18
+      "yaw": 20,
+      "pitch": 24
     },
     "atelier-noir#0": {
-      "yaw": -130,
-      "pitch": 2
+      "yaw": 8,
+      "pitch": -2
     },
     "atelier-noir#1": {
-      "yaw": -122,
-      "pitch": 2
+      "yaw": 20,
+      "pitch": -2
     },
     "atelier-noir#2": {
-      "yaw": -114,
-      "pitch": 2
+      "yaw": 32,
+      "pitch": -2
     },
     "haute-line": {
-      "yaw": -50,
-      "pitch": 2
+      "yaw": -130,
+      "pitch": 0
     },
     "haute-line@sign": {
-      "yaw": -50,
-      "pitch": 20
+      "yaw": -130,
+      "pitch": 22
     },
     "haute-line#0": {
-      "yaw": -58,
-      "pitch": 2
+      "yaw": -140,
+      "pitch": 0
     },
     "haute-line#1": {
-      "yaw": -50,
-      "pitch": 2
+      "yaw": -130,
+      "pitch": 0
     },
     "haute-line#2": {
-      "yaw": -42,
-      "pitch": 2
+      "yaw": -120,
+      "pitch": 0
     }
   },
   "electronics": {
@@ -223,52 +223,52 @@
       "pitch": -8
     },
     "back": {
-      "yaw": 0,
+      "yaw": -168,
       "pitch": -10
     },
     "ped0": {
-      "yaw": -125,
-      "pitch": 6
+      "yaw": 140,
+      "pitch": 28
     },
     "orbit-tech": {
-      "yaw": 90,
-      "pitch": -12
+      "yaw": -24,
+      "pitch": -2
     },
     "orbit-tech@sign": {
-      "yaw": 90,
-      "pitch": 12
+      "yaw": -24,
+      "pitch": 16
     },
     "orbit-tech#0": {
-      "yaw": 70,
-      "pitch": -12
+      "yaw": -36,
+      "pitch": -2
     },
     "orbit-tech#1": {
-      "yaw": 90,
-      "pitch": -12
+      "yaw": -24,
+      "pitch": -2
     },
     "orbit-tech#2": {
-      "yaw": 110,
-      "pitch": -12
+      "yaw": -12,
+      "pitch": -2
     },
     "aura-audio": {
-      "yaw": -56,
-      "pitch": -4
+      "yaw": 104,
+      "pitch": -10
     },
     "aura-audio@sign": {
-      "yaw": -56,
-      "pitch": 10
+      "yaw": 104,
+      "pitch": 16
     },
     "aura-audio#0": {
-      "yaw": -66,
-      "pitch": -4
+      "yaw": 94,
+      "pitch": -10
     },
     "aura-audio#1": {
-      "yaw": -56,
-      "pitch": -4
+      "yaw": 104,
+      "pitch": -10
     },
     "aura-audio#2": {
-      "yaw": -46,
-      "pitch": -4
+      "yaw": 114,
+      "pitch": -10
     }
   },
   "luxury": {
@@ -277,56 +277,56 @@
       "pitch": -8
     },
     "back": {
-      "yaw": 170,
-      "pitch": -8
+      "yaw": -134,
+      "pitch": -6
     },
     "cafe-gate": {
-      "yaw": -76,
-      "pitch": -10
+      "yaw": 44,
+      "pitch": -6
     },
     "ped0": {
-      "yaw": 116,
-      "pitch": 32
+      "yaw": 46,
+      "pitch": 52
     },
     "velora": {
-      "yaw": -14,
-      "pitch": -10
+      "yaw": -22,
+      "pitch": 4
     },
     "velora@sign": {
-      "yaw": -14,
-      "pitch": 20
+      "yaw": -22,
+      "pitch": 18
     },
     "velora#0": {
-      "yaw": -26,
-      "pitch": -10
+      "yaw": -30,
+      "pitch": 4
     },
     "velora#1": {
-      "yaw": -14,
-      "pitch": -10
+      "yaw": -22,
+      "pitch": 4
     },
     "velora#2": {
-      "yaw": -2,
-      "pitch": -10
+      "yaw": -14,
+      "pitch": 4
     },
     "velora-lounge": {
-      "yaw": 86,
-      "pitch": -2
+      "yaw": -168,
+      "pitch": -4
     },
     "velora-lounge@sign": {
-      "yaw": 86,
-      "pitch": 22
+      "yaw": -168,
+      "pitch": 14
     },
     "velora-lounge#0": {
-      "yaw": 76,
-      "pitch": -2
+      "yaw": -176,
+      "pitch": -4
     },
     "velora-lounge#1": {
-      "yaw": 86,
-      "pitch": -2
+      "yaw": -168,
+      "pitch": -4
     },
     "velora-lounge#2": {
-      "yaw": 96,
-      "pitch": -2
+      "yaw": -160,
+      "pitch": -4
     },
     "cafe-gate#0": {
       "yaw": 0,

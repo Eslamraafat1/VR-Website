@@ -8,14 +8,14 @@ const spread = (y, d = 8) => [y - d, y, y + d];
 
 // nav/info points: key -> [yaw, pitch]. bays: key -> { y, sign, prod: [pitch], d }
 const SPEC = {
-  entrance: { pts: { front: [100, -8], back: [0, -8] }, bays: {} },
+  entrance: { pts: { front: [0, -6], back: [180, -6] }, bays: {} },
   atrium: {
     pts: { front: [-52, -6], back: [165, -8], lift: [-125, -38], "fashion-gate": [25, -6], "electronics-gate": [130, -8], ped0: [-68, 30] },
     bays: {},
   },
-  fashion: { pts: { front: [0, -6], back: [-178, -4], ped0: [0, 22] }, bays: { "atelier-noir": { y: -122, sign: 18, prod: 2 }, "haute-line": { y: -50, sign: 20, prod: 2 } } },
-  electronics: { pts: { front: [0, -8], back: [0, -10], ped0: [-125, 6] }, bays: { "orbit-tech": { y: 90, sign: 12, prod: -12, d: 20 }, "aura-audio": { y: -56, sign: 10, prod: -4, d: 10 } } },
-  luxury: { pts: { front: [0, -8], back: [170, -8], "cafe-gate": [-76, -10], ped0: [116, 32] }, bays: { velora: { y: -14, sign: 20, prod: -10, d: 12 }, "velora-lounge": { y: 86, sign: 22, prod: -2, d: 10 } } },
+  fashion: { pts: { front: [0, -8], back: [-76, -4], ped0: [122, 40] }, bays: { "atelier-noir": { y: 20, sign: 24, prod: -2, d: 12 }, "haute-line": { y: -130, sign: 22, prod: 0, d: 10 } } },
+  electronics: { pts: { front: [0, -8], back: [-168, -10], ped0: [140, 28] }, bays: { "orbit-tech": { y: -24, sign: 16, prod: -2, d: 12 }, "aura-audio": { y: 104, sign: 16, prod: -10, d: 10 } } },
+  luxury: { pts: { front: [0, -8], back: [-134, -6], "cafe-gate": [44, -6], ped0: [46, 52] }, bays: { velora: { y: -22, sign: 18, prod: 4, d: 8 }, "velora-lounge": { y: -168, sign: 14, prod: -4, d: 8 } } },
   cafe: { pts: { front: [0, -8], back: [70, -6], ped0: [36, 30], ped1: [-56, 6] }, bays: { "cafe-lumen": { y: 34, sign: 14, prod: 0, d: 14 }, "cafe-seat": { y: -140, sign: 14, prod: -22, d: 12 } } },
   beauty: { pts: { front: [-34, -4], back: [-34, -4], "lift-1": [160, -4], ped0: [-150, -20] }, bays: { "maison-eclat": { y: -92, sign: 18, prod: 0, d: 8 } } },
   home: { pts: { front: [125, -12], back: [-160, -8], ped0: [-113, 8] }, bays: { "form-living": { y: -20, sign: 16, prod: -6, d: 12 } } },
