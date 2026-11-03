@@ -6,7 +6,7 @@ Bilingual (English LTR / Arabic RTL), light + dark themes, fully responsive.
 ```bash
 npm install
 npm run dev        # http://localhost:3000
-npm run build && npm start
+npm run build && npm start   # set NEXT_PUBLIC_SITE_URL=https://your-domain for absolute OG/sitemap URLs
 npm run assets     # OLD procedural demo imagery — overwrites the real photos, do not run (see below)
 ```
 

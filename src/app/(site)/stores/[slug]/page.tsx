@@ -8,7 +8,7 @@ export const generateStaticParams = () => getStores().map((s) => ({ slug: s.slug
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const s = getStore((await params).slug);
-  return { title: s?.name ?? "Store", description: s?.description.en };
+  return { title: s?.name ?? "Store", description: s?.description.en, openGraph: { images: s ? [s.coverImage] : undefined } };
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
