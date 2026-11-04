@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit, JetBrains_Mono, IBM_Plex_Sans_Arabic } from "next/font/google";
 import "./globals.css";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import { AppProviders } from "@/components/providers";
 import SearchOverlay from "@/components/search-overlay";
 import FavoritesDrawer from "@/components/favorites-drawer";
@@ -11,13 +12,13 @@ const sans = Outfit({ variable: "--font-sans-latin", subsets: ["latin"], weight:
 const mono = JetBrains_Mono({ variable: "--font-mono-latin", subsets: ["latin"], weight: ["400", "500"] });
 const arabic = IBM_Plex_Sans_Arabic({ variable: "--font-sans-arabic", subsets: ["arabic"], weight: ["200", "300", "400", "500", "600", "700"] });
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE),
+  metadataBase: new URL(SITE_URL),
   title: { default: "VISTRA® — Enter the experience", template: "%s · VISTRA®" },
-  description: "THE WORLD OF SHOPPING, REIMAGINED. Explore a virtual mall in 360°, discover stores, products and offers.",
-  openGraph: { type: "website", siteName: "VISTRA®", title: "VISTRA® — Enter the experience", description: "Explore a virtual mall in 360°, discover stores, products and offers.", images: [{ url: "/images/mall/hero.jpg", width: 1920, height: 1080, alt: "VISTRA virtual mall" }] },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  alternates: { canonical: "/" },
+  openGraph: { type: "website", siteName: SITE_NAME, title: "VISTRA® — Enter the experience", description: SITE_DESCRIPTION, url: "/", images: [{ url: "/images/mall/hero.jpg", width: 1920, height: 1080, alt: "VISTRA virtual mall" }] },
   twitter: { card: "summary_large_image" },
 };
 export const viewport: Viewport = { themeColor: "#090b10", width: "device-width", initialScale: 1 };
