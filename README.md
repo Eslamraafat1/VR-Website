@@ -1,57 +1,214 @@
-# VISTRA® — Enter the experience
+<div align="center">
 
-A virtual-mall / 360° shopping platform built with **Next.js 16 (App Router) · React 19 · TypeScript · Tailwind 4 · Photo Sphere Viewer · React Three Fiber · GSAP**.
-Bilingual (English LTR / Arabic RTL), light + dark themes, fully responsive.
+# VISTRA® — Virtual Mall
 
-```bash
-npm install
-npm run dev        # http://localhost:3000
-npm run build && npm start   # set NEXT_PUBLIC_SITE_URL=https://your-domain for absolute OG/sitemap URLs
-npm run assets     # OLD procedural demo imagery — overwrites the real photos, do not run (see below)
-```
+### Walk through a shopping mall in 360°, find stores and products, and get directions between spaces
 
-## Routes
-`/` home · `/experience` 360° explorer · `/stores` · `/stores/[slug]` · `/products` · `/products/[slug]` · `/offers` · `/about` · `/contact` · `/privacy` · `/terms`
+A bilingual (English LTR / Arabic RTL) virtual-mall platform built with Next.js 16, React 19 and TypeScript. Visitors explore 11 panoramic spaces over two floors, click hotspots to open stores and products, follow a floor map and route finder, and browse a regular store / product / offers directory.
+
+[![Next.js](https://img.shields.io/badge/Next.js-16.4-000000?logo=nextdotjs&logoColor=white)](https://nextjs.org)
+[![React](https://img.shields.io/badge/React-19.3-149ECA?logo=react&logoColor=white)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+<br>
+[![Photo Sphere Viewer](https://img.shields.io/badge/Photo_Sphere_Viewer-5.15-2E7D9A)](https://photo-sphere-viewer.js.org)
+[![Three.js](https://img.shields.io/badge/Three.js-0.187-000000?logo=threedotjs&logoColor=white)](https://threejs.org)
+[![React Three Fiber](https://img.shields.io/badge/React_Three_Fiber-9-000000?logo=react&logoColor=white)](https://r3f.docs.pmnd.rs)
+[![GSAP](https://img.shields.io/badge/GSAP-3.15-88CE02?logo=greensock&logoColor=black)](https://gsap.com)
+
+**[Portfolio](https://new-portfolio-ashy-xi.vercel.app/)** ·
+**[LinkedIn](https://www.linkedin.com/in/eslamraafat-dev/)** ·
+**[Email](mailto:eslamraafat736@gmail.com)**
+
+<br>
+
+<img src="docs/screenshots/desktop.jpg" alt="VISTRA home page hero on desktop" width="100%">
+
+</div>
+
+<table>
+  <tr>
+    <td width="33%"><img src="docs/screenshots/mobile-experience.jpg" alt="360° explorer on an iPhone 13 viewport"></td>
+    <td width="67%">
+      <img src="docs/screenshots/desktop-experience.jpg" alt="360° explorer at /experience with floor map, scene strip and controls"><br><br>
+      <img src="docs/screenshots/desktop-intro.jpg" alt="WebGL intro with the VISTRA wordmark">
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><sub>360° explorer on mobile (iPhone 13)</sub></td>
+    <td align="center"><sub>360° explorer (<code>/experience</code>) · WebGL intro (React Three Fiber)</sub></td>
+  </tr>
+</table>
+
+<sub>Screenshots are from a local production build (<code>npm run build && npm start</code>). A mobile view of the home page is in <a href="docs/screenshots/mobile.jpg"><code>docs/screenshots/mobile.jpg</code></a>.</sub>
+
+---
+
+## Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Tech stack](#tech-stack)
+- [Architecture](#architecture)
+- [Pages](#pages)
+- [Project structure](#project-structure)
+- [Getting started](#getting-started)
+- [Replacing the demo panoramas](#replacing-the-demo-panoramas)
+- [Hotspot editor (developer mode)](#hotspot-editor-developer-mode)
+- [Assets and licensing](#assets-and-licensing)
+- [Known limitations](#known-limitations)
+- [Deployment](#deployment)
+- [Author](#author)
+
+## Overview
+
+VISTRA is a concept project: a front end for a mall that wants shoppers to "walk" its corridors online before they visit. The mall, its 11 stores, 33 products and the offers are fictional demo data. The panoramas and photos are real, openly licensed images used as stand-ins (see [Assets and licensing](#assets-and-licensing)).
+
+The data layer is written so real content can replace the demo: all UI code reads through one service module, and the panoramas, hotspots and products can be swapped without touching components.
+
+## Features
+
+### 360° explorer (`/experience`)
+
+- 11 equirectangular panoramas across a **Ground Floor** and a **First Floor**, shown with Photo Sphere Viewer and its markers plugin.
+- **Navigation hotspots** move you between connected spaces; **store hotspots** on shop fronts open a store panel with its products.
+- **Floor map** (SVG drawn at runtime from data) shows where you are; a **route finder** (breadth-first search over the scene graph) gives turn-by-turn directions to any store or space, and the camera faces the right way when you arrive.
+- **Guided tour** that visits every space and glances at up to three stores in each.
+- Scene thumbnail strip, floor switcher, zoom, fullscreen, an info panel and optional ambient sound (synthesised with the Web Audio API, no audio files).
+- Optional **gyroscope** control on supported phones (gyroscope plugin).
+- The viewer is created once and loaded only on this route (`dynamic(..., { ssr: false })`); scene changes use `setPanorama()` and the neighbours of the current scene are pre-fetched.
+
+### Site
+
+- **WebGL intro** (React Three Fiber + GSAP) shown once per browser session, skippable with a button or `Escape`.
+- Store directory, store pages, product explorer, product pages and an offers page with discounts and dates.
+- **Global search** for stores, products, places and offers: press `/` to open it, use the arrow keys and Enter to pick a result.
+- **Favourites** drawer saved in `localStorage`.
+- English / Arabic with full RTL, light and dark themes, a custom cursor and magnetic buttons. Animations respect `prefers-reduced-motion`.
+- Contact forms validate locally and are clearly marked as demo (nothing is sent).
+
+### SEO and metadata
+
+- Per-page metadata, with Open Graph images for every store and product page.
+- `sitemap.xml` (fixed pages + every store and product) and `robots.txt` generated by the App Router; a web app manifest.
+- Store and product pages are statically generated with `generateStaticParams`.
+- Set `NEXT_PUBLIC_SITE_URL` so the sitemap, robots and Open Graph URLs are absolute.
+
+### Safety
+
+- Hotspots are built with DOM APIs and `textContent`; no untrusted HTML is injected.
+
+## Tech stack
+
+| Layer | Tools |
+| --- | --- |
+| Framework | Next.js 16.4 (App Router), React 19.3 |
+| Language | TypeScript 5 |
+| Styling | Tailwind CSS 4, CSS custom properties for the light / dark themes |
+| 360° viewer | `@photo-sphere-viewer/core` 5.15 + markers and gyroscope plugins |
+| 3D | Three.js 0.187, React Three Fiber 9, drei 10 (intro scene) |
+| Animation | GSAP 3.15 |
+| Audio | Web Audio API (synthesised ambience) |
+| Asset scripts | Node.js scripts in `scripts/` for hotspot anchors, panorama crops and product images |
+| Quality | ESLint 9 (`eslint-config-next`) |
 
 ## Architecture
-```
+
+- **One source of truth.** `SCENES` in [`src/data/mall.ts`](src/data/mall.ts) declares which spaces connect to which, once. The navigation hotspots, the floor map's corridors, the route finder and the arrival camera direction are all derived from it, so the viewer, map, thumbnails and store panels always agree.
+- **One data entry point.** UI code reads data only through [`src/data/service.ts`](src/data/service.ts), so the demo data can later be replaced by an API.
+- **Own state, not a tour plugin.** Photo Sphere Viewer's Virtual Tour plugin was evaluated but not used: it would hold a second copy of the graph, and the app needs its own state to drive the map, panels and routing.
+
+## Pages
+
+| Route | Page |
+| --- | --- |
+| `/` | Home: intro, hero, panorama strip and sections |
+| `/experience` | Full-screen 360° explorer |
+| `/stores`, `/stores/[slug]` | Store directory and store pages (11) |
+| `/products`, `/products/[slug]` | Product explorer and product pages (33) |
+| `/offers` | Current offers |
+| `/about`, `/contact`, `/privacy`, `/terms` | Static pages |
+
+## Project structure
+
+```text
 src/
-  app/                    routes (the (site) group adds header/footer; /experience is full-screen)
-  components/
-    experience/           pano-viewer (PSV), floor-map (SVG), panels, hotspot-editor, experience-app (state)
-    home/                 intro (R3F), hero, sections, pano-strip
-    pages/                client views for directory, store, product, offers, static pages
-    ui/ …                 icons, logo, dialog (native <dialog>), magnetic
-    providers.tsx         locale, theme, favourites, search state
-  data/
-    types.ts              Mall, Floor, Scene, Store, Product, Offer, Hotspot types
-    mall.ts               ALL demo content + the scene graph (single source of truth)
-    service.ts            the only module UI code reads data from (swap for an API later)
-    generated/anchors.json  yaw/pitch of shop-fronts & doors (produced by scripts/)
-  i18n/dict.ts            UI strings  [en, ar]
-scripts/                  real-anchors.mjs (hotspot placement), real-views.mjs (crops from the panoramas), panorama-sources.json; gen-assets.mjs = legacy procedural generator (product illustrations)
+├── app/                      # routes; the (site) group adds header/footer, /experience is full-screen
+│   ├── sitemap.ts · robots.ts · manifest.ts
+├── components/
+│   ├── experience/           # pano-viewer (PSV), floor-map (SVG), panels, hotspot-editor, experience-app (state)
+│   ├── home/                 # intro (R3F), hero, sections, pano-strip
+│   ├── pages/                # client views: directory, store, product, offers, static pages
+│   ├── ui/                   # icons, logo, dialog (native <dialog>), magnetic
+│   └── providers.tsx         # locale, theme, favourites, search state
+├── data/
+│   ├── types.ts              # Mall, Floor, Scene, Store, Product, Offer, Hotspot types
+│   ├── mall.ts               # all demo content + the scene graph
+│   ├── service.ts            # the only module UI code reads data from
+│   └── generated/anchors.json  # yaw/pitch of shop fronts and doors (from scripts/)
+├── i18n/dict.ts              # UI strings [en, ar]
+└── lib/                      # GSAP setup, ambient audio
+public/
+├── panoramas/                # 11 panoramas + thumbnails
+└── images/                   # mall, store, campaign and product images
+scripts/                      # real-anchors.mjs, real-views.mjs, real-products.mjs, source manifests
 ```
-* **One source of truth.** `SCENES` in `src/data/mall.ts` declares scene links once. Navigation hotspots, the floor map's corridors, the BFS route finder and arrival camera direction are all derived from it, so the viewer, map, thumbnails and store panels always show the same state.
-* **Viewer.** `@photo-sphere-viewer/core` + `markers-plugin` (+ `gyroscope-plugin` for optional motion control). The *Virtual Tour* plugin was evaluated but not used: it would hold a second copy of the graph, and the app needs its own state to drive the map, panels and routing. The viewer is loaded with `dynamic(..., { ssr: false })`, only on `/experience`; it is created once and `setPanorama()` is used for scene changes; the current scene's neighbours are pre-fetched.
-* **Safety.** Hotspots are built with DOM APIs / `textContent` — no untrusted HTML is injected. Forms validate locally and are clearly marked as demo (nothing is sent).
 
-## Replacing the demo panoramas with real client photography
-1. Put equirectangular (2:1) JPGs in **`public/panoramas/`** named after the scene id: `entrance.jpg`, `atrium.jpg`, `fashion.jpg`, `electronics.jpg`, `luxury.jpg`, `cafe.jpg`, `beauty.jpg`, `home.jpg`, `sports.jpg`, `dining.jpg`, `lounge.jpg` (+ `<id>-thumb.jpg` 480×300). 4096×2048 is a good size for desktop; keep files < 3 MB. Don't use ordinary photos — they must be true 360° captures.
-2. Or point a scene at any other file by editing `panorama` / `thumbnail` in `scene()` inside `src/data/mall.ts`.
-3. Hotspot positions come from `src/data/generated/anchors.json`, produced by `scripts/real-anchors.mjs` (hand-placed against the current real panoramas; edit the SPEC table and re-run, or use the `?debug=1` editor). `npm run assets` would overwrite panoramas and anchors with the old procedural ones — don't run it.
+## Getting started
 
-## Adjusting hotspot coordinates (developer mode)
-Open **`/experience?debug=1`**. A *Hotspot editor* appears (hidden for normal visitors): add a hotspot at the view centre, choose its type, titles (EN/AR), link it to a store/product/scene, set yaw/pitch numerically or tick **place by click** and click the panorama. **Copy JSON** exports the draft. Paste final values into `getHotspots()` overrides / `anchors.json`. (Nothing is persisted — there is no backend.)
-Yaw/pitch are in **degrees**; yaw 0 is the horizontal centre of the image, positive to the right.
+**Requirements:** Node.js 20.9 or newer and npm.
 
-## Assets & licensing
-* **Panoramas (22 files), mall, store and campaign images (25)** are real photography: CC0 equirectangular HDRIs from [Poly Haven](https://polyhaven.com) (asset, author and link per file in `scripts/panorama-sources.json` and `public/asset-manifest.json`). Store/mall/campaign images are rectilinear crops rendered from those panoramas by `scripts/real-views.mjs` (needs the full-resolution sources in `.panorama-src/`, git-ignored/not deployed).
-* They are generic real interiors standing in for the mall (colonnaded hall, cruise-ship atrium, glass-fronted passage, TV studio, Victorian hall, gym, …) — the fictional stores are overlays. A few still show small incidental signage (a broadcaster logo in the electronics studio, banners in the gym, generic wording in the atrium); the heavily branded shop-front panoramas were replaced. Replace with client photography before a public launch.
-* **Product images (33)** are real Pexels photographs ([Pexels licence](https://www.pexels.com/license/): free for commercial use, no attribution required), picked by hand for having no visible brand logos; per-file Pexels links in `scripts/product-sources.json`, re-fetch with `node scripts/real-products.mjs`. They are generic stand-ins for the fictional products (e.g. the "Orbit Phone X" photo is just a phone). Replace with real catalogue shots when available.
+```bash
+git clone https://github.com/Eslamraafat1/VR-Website.git
+cd VR-Website
+npm install
+npm run dev        # http://localhost:3000
+```
+
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Start the dev server |
+| `npm run build` | Production build (set `NEXT_PUBLIC_SITE_URL=https://your-domain` for absolute OG / sitemap URLs) |
+| `npm run start` | Serve the production build |
+| `npm run lint` | Run ESLint |
+| `npm run assets` | **Legacy, do not run.** Regenerates the old procedural demo imagery and overwrites the real photos and anchors. |
+
+## Replacing the demo panoramas
+
+1. Put equirectangular (2:1) JPGs in `public/panoramas/`, named after the scene id: `entrance.jpg`, `atrium.jpg`, `fashion.jpg`, `electronics.jpg`, `luxury.jpg`, `cafe.jpg`, `beauty.jpg`, `home.jpg`, `sports.jpg`, `dining.jpg`, `lounge.jpg`, plus `<id>-thumb.jpg` (480×300). 4096×2048 is a good desktop size; keep files under 3 MB. They must be true 360° captures, not ordinary photos.
+2. Or point a scene at another file by editing `panorama` / `thumbnail` in `scene()` inside `src/data/mall.ts`.
+3. Hotspot positions come from `src/data/generated/anchors.json`, produced by `scripts/real-anchors.mjs` (hand-placed against the current panoramas). Edit its table and re-run it, or use the editor below.
+
+## Hotspot editor (developer mode)
+
+Open **`/experience?debug=1`**. A hotspot editor appears (hidden for normal visitors): add a hotspot at the view centre, choose its type, set English / Arabic titles, link it to a store, product or scene, and set yaw / pitch numerically or tick **place by click** and click the panorama. **Copy JSON** exports the draft; paste the values into `getHotspots()` overrides or `anchors.json`. Nothing is saved, because there is no back end.
+
+Yaw and pitch are in degrees; yaw 0 is the horizontal centre of the image, positive to the right.
+
+## Assets and licensing
+
+- **Panoramas and mall / store / campaign images** are CC0 equirectangular HDRIs from [Poly Haven](https://polyhaven.com). The asset, author and link for each file are in `scripts/panorama-sources.json` and `public/asset-manifest.json`. Store, mall and campaign images are crops rendered from those panoramas by `scripts/real-views.mjs`.
+- They are generic real interiors standing in for the mall (a colonnaded hall, a cruise-ship atrium, a glass-fronted passage, a TV studio, a gym, …); the fictional stores are overlays. A few still show small incidental signage.
+- **Product images (33)** are Pexels photos ([Pexels licence](https://www.pexels.com/license/)), picked for having no visible brand logos. Per-file links are in `scripts/product-sources.json`; re-fetch with `node scripts/real-products.mjs`.
+- Replace all of these with real client photography before a public launch.
 
 ## Known limitations
-* Product and panorama photos are real but generic stand-ins, not photos of the actual products or an actual mall.
-* No backend: favourites live in `localStorage`; contact forms, “Contact store” and purchases are demo-only (no email/CRM/payments).
-* Ambient sound is synthesised with WebAudio (no audio files) and was not auditioned in a headless browser. Floor-plan SVGs are rendered from data at runtime (no static files in `public/floor-plans/`).
-* Admin: data structures and `service.ts` are admin-ready, but no admin UI exists; the hotspot editor exports JSON only.
-* Gyroscope control needs HTTPS and a device that exposes motion sensors; it is untested on real hardware.
+
+- Product and panorama photos are generic stand-ins, not photos of real products or a real mall.
+- No back end: favourites live in `localStorage`; contact forms, "Contact store" and purchases are demo only (no email, CRM or payments).
+- Ambient sound was not auditioned in a headless browser.
+- No admin UI yet: the data structures and `service.ts` are ready for one, and the hotspot editor exports JSON only.
+- Gyroscope control needs HTTPS and a device with motion sensors; it is untested on real hardware.
+
+## Deployment
+
+Not deployed yet. The app builds to static pages (all store and product pages are pre-rendered), so it can be deployed to Vercel as is; set `NEXT_PUBLIC_SITE_URL` to the production domain.
+
+## Author
+
+**Eslam Raafat** — Front-End Developer (React / Next.js / TypeScript)
+
+- **Portfolio:** [new-portfolio-ashy-xi.vercel.app](https://new-portfolio-ashy-xi.vercel.app/)
+- **LinkedIn:** [linkedin.com/in/eslamraafat-dev](https://www.linkedin.com/in/eslamraafat-dev/)
+- **GitHub:** [@Eslamraafat1](https://github.com/Eslamraafat1)
+- **Email:** [eslamraafat736@gmail.com](mailto:eslamraafat736@gmail.com)
