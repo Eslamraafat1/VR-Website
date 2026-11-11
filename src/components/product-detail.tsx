@@ -7,6 +7,7 @@ import { discountPct, effectivePrice, getStore, getProducts } from "@/data/servi
 import type { Product } from "@/data/types";
 import { IconHeart, IconMail, IconCube, IconArrow } from "./ui/icons";
 import { StoreLogo } from "./ui/logo";
+import ZoomImage from "./fx/zoom-image";
 
 /** Small contact form (demo: validated locally, not sent anywhere). */
 function ContactStore({ storeName }: { storeName: string }) {
@@ -55,7 +56,7 @@ export default function ProductDetail({ product, layout = "split", onNavigate }:
   return (
     <div className={layout === "split" ? "grid md:grid-cols-2" : "grid"}>
       <div className="relative aspect-square bg-surface">
-        <img src={product.images[0]} alt={L(product.name)} className="h-full w-full object-cover" />
+        <ZoomImage src={product.images[0]} alt={L(product.name)} glow={product.variants[variant]?.swatch} className="h-full w-full" />
         {off > 0 && <span className="mono-label absolute start-3 top-3 bg-champagne px-2 py-1 text-[var(--on-accent)]">{pct(off)}</span>}
       </div>
       <div className="flex flex-col gap-5 p-6 md:p-8">

@@ -9,6 +9,8 @@ import { StoreLogo, tint } from "@/components/ui/logo";
 import { PortalLink } from "@/components/portal";
 import { IconArrow, IconCube, IconMail, IconPhone } from "@/components/ui/icons";
 import { Chip } from "./directory";
+import Parallax from "@/components/fx/parallax";
+import GoldDust from "@/components/fx/gold-dust";
 import { ProductCard } from "./product-grid";
 import { effectivePrice, getOffersByStore, getProductsByStore, getScene, getStores } from "@/data/service";
 import type { CategoryId, Product, Store } from "@/data/types";
@@ -42,7 +44,7 @@ export default function StoreView({ store }: { store: Store }) {
   const headStyle = { fontFamily: th.font, textTransform: th.upper ? ("uppercase" as const) : undefined, color: tint(store.color) };
 
   const cover = (
-    <img src={store.coverImage} alt={`${store.name} — ${cat(store.category)}`} className="absolute inset-0 h-full w-full object-cover" fetchPriority="high" />
+    <Parallax><img src={store.coverImage} alt={`${store.name} — ${cat(store.category)}`} className="h-full w-full object-cover" fetchPriority="high" /></Parallax>
   );
 
   return (
@@ -62,6 +64,7 @@ export default function StoreView({ store }: { store: Store }) {
         ) : (
           <>
             {cover}
+            <GoldDust className="z-[1]" />
             <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-[var(--bg)]/50 to-[var(--bg)]/20" />
             <div className={`gutter relative flex min-h-[80svh] flex-col justify-end gap-6 pb-14 pt-32 ${th.hero === "center" ? "items-center text-center" : ""}`}>
               <StoreLogo name={store.name} monogram={store.monogram} color={store.color} size={64} />

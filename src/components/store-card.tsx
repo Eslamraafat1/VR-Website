@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useApp } from "./providers";
 import { StoreLogo } from "./ui/logo";
+import Spotlight from "./fx/spotlight";
 import { IconArrow, IconCube } from "./ui/icons";
 import { getOffersByStore, getScene } from "@/data/service";
 import type { Store } from "@/data/types";
@@ -45,7 +46,7 @@ export default function StoreCard({ store }: { store: Store }) {
   const offer = getOffersByStore(store.id)[0];
   const scene = getScene(store.sceneId);
   return (
-    <article className="group flex flex-col border border-line bg-surface transition-colors hover:border-champagne">
+    <Spotlight className="h-full"><article className="group flex h-full flex-col border border-line bg-surface transition-colors hover:border-champagne">
       <Link href={`/stores/${store.slug}`} data-cursor="view" className="relative block aspect-[4/3]" aria-label={`${t("stores.view")} ${store.name}`}>
         <LivingImage src={store.coverImage} alt={`${store.name} — ${cat(store.category)}`} className="h-full" />
         {offer && <span className="mono-label absolute start-3 top-3 bg-champagne px-2 py-1 !text-[var(--on-accent)]">{pct(offer.discount)}</span>}
@@ -66,6 +67,6 @@ export default function StoreCard({ store }: { store: Store }) {
           <Link className="btn btn-ghost !px-3" href={`/stores/${store.slug}`} aria-label={`${t("stores.view")} ${store.name}`}><IconArrow width={16} /></Link>
         </div>
       </div>
-    </article>
+    </article></Spotlight>
   );
 }
