@@ -198,3 +198,12 @@ select.field option { background: var(--surface); color: var(--fg); }
 .psv-marker:nth-child(5n) .vx-hotspot { animation-delay: 0.6s; }
 @keyframes vx-pop { from { opacity: 0; scale: 0.2; } to { opacity: 1; scale: 1; } }
 @media (prefers-reduced-motion: reduce) { .vx-warp, .vx-scan, .vx-hotspot { animation: none; } }
+
+/* ---------- about + contact FX ---------- */
+.vx-draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: vx-draw 0.9s ease-out 0.1s forwards; }
+.vx-draw-2 { animation-delay: 0.7s; animation-duration: 0.5s; }
+@keyframes vx-draw { to { stroke-dashoffset: 0; } }
+.field { background-image: linear-gradient(var(--champagne), var(--champagne)); background-size: 0% 1px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size 0.45s ease, border-color 0.2s; }
+html[dir="rtl"] .field { background-position: 100% 100%; }
+.field:focus { background-size: 100% 1px; }
+@media (prefers-reduced-motion: reduce) { .vx-draw { animation: none; stroke-dashoffset: 0; } }
