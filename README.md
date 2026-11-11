@@ -112,6 +112,25 @@ Every effect is built to degrade: it switches off under `prefers-reduced-motion`
 - Native **Share** button on stores and products (copies the link where the share sheet isn't available), larger touch targets and press feedback.
 - Checked at 320 px and 375 px in both languages with no horizontal overflow on the main pages. Real-device testing (especially iOS Safari) has not been done.
 
+<table>
+  <tr>
+    <td width="20%"><img src="docs/screenshots/mobile.jpg" alt="Home hero on a 390 px phone with gold dust and the bottom dock"></td>
+    <td width="20%"><img src="docs/screenshots/mobile-stores.jpg" alt="Store directory with the collapsed filter bar"></td>
+    <td width="20%"><img src="docs/screenshots/mobile-offers.jpg" alt="Offers hero with the live countdown"></td>
+    <td width="20%"><img src="docs/screenshots/mobile-product.jpg" alt="Product details as a bottom sheet"></td>
+    <td width="20%"><img src="docs/screenshots/mobile-experience.jpg" alt="360 degree explorer with the scrolling toolbar"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Home + dock</sub></td>
+    <td align="center"><sub>Collapsed filters</sub></td>
+    <td align="center"><sub>Live countdown</sub></td>
+    <td align="center"><sub>Product sheet</sub></td>
+    <td align="center"><sub>360° toolbar</sub></td>
+  </tr>
+</table>
+
+<sub>Phone screenshots are from a local production build in a 390 × 844 browser viewport (not a physical device).</sub>
+
 ### SEO and metadata
 
 - Per-page title, description and canonical URL through one helper ([`src/lib/site.ts`](src/lib/site.ts)), which also keeps the site name and a fallback Open Graph image on every page; store and product pages use their own image.
