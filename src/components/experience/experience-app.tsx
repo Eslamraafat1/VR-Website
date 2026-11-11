@@ -8,6 +8,7 @@ import PanoViewer, { type PanoHandle, type PanoStatus } from "./pano-viewer";
 import FloorMap from "./floor-map";
 import { InfoPanel, ProductPanel, SidePanel, StorePanel } from "./panels";
 import HotspotEditor from "./hotspot-editor";
+import GoldDust from "@/components/fx/gold-dust";
 import Logo from "@/components/ui/logo";
 import { useApp } from "@/components/providers";
 import { IconArrow, IconClose, IconCompass, IconFullscreen, IconGyro, IconInfo, IconMap, IconMinus, IconMoon, IconPlay, IconPlus, IconSearch, IconSound, IconSun } from "@/components/ui/icons";
@@ -34,7 +35,7 @@ export default function ExperienceApp() {
   const [status, setStatus] = useState<PanoStatus>("loading");
   const [progress, setProgress] = useState(0);
   const [retryKey, setRetryKey] = useState(0);
-  const [transition, setTransition] = useState<{ title: string; floor: string } | null>(null);
+  const [transition, setTransition] = useState<{ title: string; floor: string; thumb?: string } | null>(null);
   const [mapOpen, setMapOpen] = useState(false);
   const [miniOpen, setMiniOpen] = useState(true);
   const [guideOpen, setGuideOpen] = useState(false);
@@ -87,7 +88,7 @@ export default function ExperienceApp() {
     }
     setPanel(null); setActiveId(null);
     transitioning.current = true;
-    setTransition({ title: L(dest.title), floor: floorName(dest.floorId) });
+    setTransition({ title: L(dest.title), floor: floorName(dest.floorId), thumb: dest.thumbnail });
     window.setTimeout(() => {
       setYaw(arrivalYaw(sceneId, to));
       setSceneId(to);
@@ -222,6 +223,7 @@ export default function ExperienceApp() {
       <PanoViewer ref={handle} scene={scene} arrivalYaw={yaw} hotspots={hotspots} activeId={activeId} locale={locale} focus={focus} retryKey={retryKey}
         onSelect={onSelect} onStatus={onStatus} onProgress={setProgress} onViewClick={onViewClick} />
 
+      <GoldDust className="z-[2] opacity-50" />
       {/* readability gradients */}
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/70 to-transparent" />
       <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black/75 to-transparent" />
@@ -264,8 +266,10 @@ export default function ExperienceApp() {
 
       {/* SCENE TRANSITION */}
       <div aria-hidden={!transition} className={`pointer-events-none absolute inset-0 z-[25] grid place-items-center bg-[#05060a] transition-opacity duration-300 ${transition ? "opacity-100" : "opacity-0"}`}>
+        {transition?.thumb && <img src={transition.thumb} alt="" className="vx-warp absolute inset-0 h-full w-full object-cover opacity-30 blur-md" />}
+        {transition && <span aria-hidden className="vx-scan absolute inset-x-0 h-px bg-cyan/80 shadow-[0_0_24px_4px_rgba(123,231,245,0.6)]" />}
         {transition && (
-          <div className="text-center text-white">
+          <div className="relative text-center text-white">
             <IconArrow width={28} className="mx-auto mb-4 -rotate-90 text-cyan" />
             <p className="mono-label !text-cyan">{t("xp.arriving")}</p>
             <p className="display-m mt-2">{transition.title}</p>

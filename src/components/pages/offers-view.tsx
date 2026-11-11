@@ -9,6 +9,10 @@ import Reveal from "@/components/reveal";
 import { PortalLink } from "@/components/portal";
 import { IconArrow, IconCube } from "@/components/ui/icons";
 import { Chip, PageHeader } from "./directory";
+import Parallax from "@/components/fx/parallax";
+import GoldDust from "@/components/fx/gold-dust";
+import CountUp from "@/components/fx/count-up";
+import Countdown from "@/components/fx/countdown";
 import { getCategories, getOffers, getProduct, getStore } from "@/data/service";
 import type { CategoryId, Offer } from "@/data/types";
 
@@ -26,13 +30,15 @@ export default function OffersView() {
   return (
     <>
       <section className="relative -mt-16 isolate min-h-[85svh] overflow-hidden md:-mt-20">
-        <img src={campaign.image} alt="" className="absolute inset-0 h-full w-full object-cover" fetchPriority="high" />
+        <Parallax><img src={campaign.image} alt="" className="h-full w-full object-cover" fetchPriority="high" /></Parallax>
+        <GoldDust className="z-[1]" />
         <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-[var(--bg)]/40 to-[var(--bg)]/10" />
         <div className="gutter relative flex min-h-[85svh] flex-col justify-end gap-6 pb-14 pt-32">
           <p className="mono-label text-champagne">{t("offers.campaign")} · 2026</p>
           <h1 className="display" lang="en">{t("offers.seasonal")}</h1>
           <p className="thin max-w-xl text-xl">{t("offers.seasonalText")}</p>
-          <div className="flex items-center gap-6"><span className="text-7xl font-extralight text-champagne md:text-9xl">{pct(campaign.discount)}</span><span className="mono-label">{t("offers.valid")} {date(campaign.endDate)}</span></div>
+          <div className="flex items-center gap-6"><span className="text-7xl font-extralight text-champagne md:text-9xl"><CountUp to={campaign.discount} format={pct} /></span><span className="mono-label">{t("offers.valid")} {date(campaign.endDate)}</span></div>
+          <div><p className="mono-label mb-3">{t("offers.endsIn")}</p><Countdown endDate={campaign.endDate} big /></div>
           <div><PortalLink href="/experience?scene=beauty&store=maison-eclat" className="btn btn-solid" data-cursor="enter">{t("offers.inStore")} <IconArrow width={16} /></PortalLink></div>
         </div>
       </section>

@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useApp } from "./providers";
 import { StoreLogo } from "./ui/logo";
+import Spotlight from "./fx/spotlight";
+import Countdown from "./fx/countdown";
 import { IconArrow } from "./ui/icons";
 import { getProduct, getStore } from "@/data/service";
 import type { Offer } from "@/data/types";
@@ -17,7 +19,7 @@ export default function OfferCard({ offer, onOpen }: { offer: Offer; onOpen?: (o
   const sale = product?.discountPrice && !offer.campaign ? product.discountPrice : discounted;
 
   return (
-    <article id={offer.id} className="group flex flex-col border border-line bg-surface" data-cursor="view">
+    <Spotlight className="h-full"><article id={offer.id} className="group flex h-full flex-col border border-line bg-surface" data-cursor="view">
       <div className="relative aspect-[4/3] overflow-hidden">
         <img src={img} alt={product ? L(product.name) : L(offer.title)} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
         <span className="absolute start-0 top-0 bg-champagne px-3 py-2 text-lg font-semibold text-[var(--on-accent)]">{pct(offer.discount)}</span>
@@ -32,6 +34,7 @@ export default function OfferCard({ offer, onOpen }: { offer: Offer; onOpen?: (o
           <p className="flex items-baseline gap-3"><span className="text-xl">{price(sale)}</span><span className="text-fg3 line-through">{price(original)}</span></p>
         ) : <p className="text-sm text-fg2">{L(offer.description)}</p>}
         <p className="mono-label !text-fg3">{t("offers.valid")} {date(offer.endDate)}</p>
+        <Countdown endDate={offer.endDate} />
         <div className="mt-auto pt-2">
           {onOpen ? (
             <button className="btn w-full" onClick={() => onOpen(offer)}>{t("offers.view")} <IconArrow width={16} /></button>
@@ -40,6 +43,6 @@ export default function OfferCard({ offer, onOpen }: { offer: Offer; onOpen?: (o
           )}
         </div>
       </div>
-    </article>
+    </article></Spotlight>
   );
 }
