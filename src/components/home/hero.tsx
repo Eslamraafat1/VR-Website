@@ -8,6 +8,7 @@ import Magnetic from "@/components/ui/magnetic";
 import { PortalLink } from "@/components/portal";
 import { IconArrow } from "@/components/ui/icons";
 import PanoStrip from "./pano-strip";
+import GoldDust from "@/components/fx/gold-dust";
 import { getMall } from "@/data/service";
 import { isFinePointer, prefersReducedMotion, registerGsap } from "@/lib/gsap";
 
@@ -56,6 +57,7 @@ export default function Hero() {
       <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-[var(--bg)]/80 via-[var(--bg)]/45 to-transparent" />
       <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_70%,transparent_30%,var(--bg)_110%)] opacity-70" />
 
+      <GoldDust className="z-[5]" />
       <div className="hero-content gutter relative z-10 grid gap-10 pb-14 pt-32 lg:grid-cols-[1fr_380px] lg:items-end">
         <div>
           <p className="hero-fade mono-label mb-6 flex flex-wrap items-center gap-3 !text-fg"><span className="inline-block size-2 animate-pulse bg-cyan" /><span ref={coord} dir="ltr">{mall.coordinates.lat} · {mall.coordinates.lng}</span></p>

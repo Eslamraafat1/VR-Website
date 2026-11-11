@@ -178,3 +178,11 @@ select.field option { background: var(--surface); color: var(--fg); }
 
 .scrollbar-none { scrollbar-width: none; }
 .scrollbar-none::-webkit-scrollbar { display: none; }
+
+/* ---------- creative FX ---------- */
+.vx-marquee { animation: vx-marquee 45s linear infinite; }
+.group:hover .vx-marquee { animation-duration: 120s; }
+@keyframes vx-marquee { to { transform: translateX(-33.3333%); } }
+.vx-spot:hover .vx-spot-glow { opacity: 1; }
+.vx-spot-glow { background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), rgba(214, 184, 120, 0.28), transparent 60%); mix-blend-mode: soft-light; }
+@media (prefers-reduced-motion: reduce) { .vx-marquee { animation: none; } }

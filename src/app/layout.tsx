@@ -6,6 +6,7 @@ import { AppProviders } from "@/components/providers";
 import SearchOverlay from "@/components/search-overlay";
 import FavoritesDrawer from "@/components/favorites-drawer";
 import Cursor from "@/components/cursor";
+import ScrollProgress from "@/components/fx/scroll-progress";
 import { PortalHost } from "@/components/portal";
 
 const sans = Outfit({ variable: "--font-sans-latin", subsets: ["latin"], weight: ["200", "300", "400", "500", "600", "700"] });
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
           <SearchOverlay />
           <FavoritesDrawer />
+          <ScrollProgress />
           <Cursor />
           <PortalHost />
         </AppProviders>

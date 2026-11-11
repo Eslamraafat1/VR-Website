@@ -10,6 +10,8 @@ import { IconArrow } from "@/components/ui/icons";
 import { LivingImage } from "@/components/store-card";
 import OfferCard from "@/components/offer-card";
 import PanoStrip from "./pano-strip";
+import CountUp from "@/components/fx/count-up";
+import Spotlight from "@/components/fx/spotlight";
 import { getCategories, getExperiences, getFloors, getMall, getOffers, getScenes, getStores } from "@/data/service";
 import { prefersReducedMotion, registerGsap } from "@/lib/gsap";
 
@@ -34,10 +36,10 @@ export function ExploreSection() {
     return () => { tween.scrollTrigger?.kill(); tween.kill(); ScrollTrigger.refresh(); };
   }, []);
 
-  const stats: [string, string][] = [
-    [num(getStores().length), t("explore.stores")],
-    [num(getScenes().length), t("explore.experiences")],
-    [num(getFloors().length), t("dir.floor")],
+  const stats: [number, string][] = [
+    [getStores().length, t("explore.stores")],
+    [getScenes().length, t("explore.experiences")],
+    [getFloors().length, t("dir.floor")],
   ];
   return (
     <section className="relative py-24 md:py-36" aria-labelledby="explore-title">
@@ -55,7 +57,7 @@ export function ExploreSection() {
             <p className="mono-label mt-3 !text-[#f4f1ea]/80">{t("explore.floor")}: {floorName("ground")}</p>
           </div>
           <dl className="flex gap-8">
-            {stats.map(([n, l]) => <div key={l}><dd className="text-4xl font-light md:text-5xl">{n}</dd><dt className="mono-label mt-1 !text-[#f4f1ea]/70">{l}</dt></div>)}
+            {stats.map(([n, l]) => <div key={l}><dd className="text-4xl font-light md:text-5xl"><CountUp to={n} format={num} /></dd><dt className="mono-label mt-1 !text-[#f4f1ea]/70">{l}</dt></div>)}
           </dl>
           <Magnetic><PortalLink href="/experience" className="btn btn-solid" data-cursor="enter">{t("explore.enter")} <IconArrow width={16} /></PortalLink></Magnetic>
         </div>
@@ -78,7 +80,7 @@ export function StoresSection() {
       <div className="gutter grid gap-3 md:grid-cols-12 md:gap-4">
         {tiles.map(({ c, store }, i) => (
           <Reveal key={c} className={`${TILE[i]}`} delay={(i % 3) * 0.08}>
-            <Link href={`/stores?category=${c}`} data-cursor="view" className="group relative block h-full w-full overflow-hidden bg-surface" aria-label={`${cat(c)} — ${store.name}`}>
+            <Spotlight><Link href={`/stores?category=${c}`} data-cursor="view" className="group relative block h-full w-full overflow-hidden bg-surface" aria-label={`${cat(c)} — ${store.name}`}>
               <LivingImage src={store.coverImage} alt="" className="absolute inset-0 transition-[clip-path] duration-700 [clip-path:inset(0_0_0_0)] group-hover:[clip-path:inset(4%_4%_4%_4%)]" />
               <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/30" />
               <span className="mono-label absolute start-4 top-4 !text-white" dir="ltr"><span className="inline-block transition-transform duration-500 group-hover:-translate-y-0.5">{String(i + 1).padStart(2, "0")}</span> / 08</span>
@@ -87,7 +89,7 @@ export function StoresSection() {
                 <h3 className="display-m !text-3xl md:!text-4xl">{cat(c)}</h3>
                 <p className="mono-label mt-3 flex items-center gap-2 !text-white/80">{t("stores.view")} <IconArrow width={14} className="transition-transform group-hover:translate-x-1" /></p>
               </div>
-            </Link>
+            </Link></Spotlight>
           </Reveal>
         ))}
       </div>
