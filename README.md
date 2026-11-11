@@ -50,6 +50,7 @@ A bilingual (English LTR / Arabic RTL) virtual-mall platform built with Next.js 
 
 - [Overview](#overview)
 - [Features](#features)
+- [Motion and mobile design](#motion-and-mobile-design)
 - [Tech stack](#tech-stack)
 - [Architecture](#architecture)
 - [Pages](#pages)
@@ -89,6 +90,27 @@ The data layer is written so real content can replace the demo: all UI code read
 - **Favourites** drawer saved in `localStorage`.
 - English / Arabic with full RTL, light and dark themes, a custom cursor and magnetic buttons. Animations respect `prefers-reduced-motion`.
 - Contact forms validate locally and are clearly marked as demo (nothing is sent).
+
+### Motion and mobile design
+
+Every effect is built to degrade: it switches off under `prefers-reduced-motion`, mouse-only effects never run on touch, and nothing hides content from people without JavaScript.
+
+**Motion (all pages, English and Arabic)**
+
+- **Home:** drifting gold dust in the hero that moves away from the pointer, an endless brand marquee, a scroll-progress bar, animated counters and spotlight-and-tilt store tiles.
+- **Stores and products:** parallax store covers, pointer-lit cards, and a product image magnifier whose glow takes the colour of the selected variant.
+- **Offers:** a live countdown to each offer's end date and a parallax campaign hero whose discount counts up.
+- **360° explorer:** a cinematic scene transition (blurred destination, scanning line), hotspots that pop in one after another, and light ambient dust over the viewer.
+- **About and contact:** story text that lights up word by word as you scroll, images that open from an inset frame, a copy-email button, a live open-now badge, an animated field underline and a drawn success check.
+
+**Mobile**
+
+- A thumb-reach **bottom dock** (Home, Stores, Mall, Products, Offers) on phones; from `lg` up the header carries the links.
+- **Collapsible filters** on the store and product lists: one bar with the active-filter count and the result count, so results start almost immediately instead of a screen lower.
+- Product details open as a **bottom sheet**; the header hides while scrolling down and returns on scroll up; store tiles use a two-column grid; the experience carousel shows a progress track.
+- The 360° toolbar scrolls and fits down to 320 px wide (zoom buttons are hidden on touch, where pinch-to-zoom works), and it respects the notch and safe areas.
+- Native **Share** button on stores and products (copies the link where the share sheet isn't available), larger touch targets and press feedback.
+- Checked at 320 px and 375 px in both languages with no horizontal overflow on the main pages. Real-device testing (especially iOS Safari) has not been done.
 
 ### SEO and metadata
 
@@ -140,9 +162,11 @@ src/
 │   ├── sitemap.ts · robots.ts · manifest.ts
 ├── components/
 │   ├── experience/           # pano-viewer (PSV), floor-map (SVG), panels, hotspot-editor, experience-app (state)
+│   ├── fx/                   # motion effects: gold-dust, marquee, spotlight, parallax, count-up, countdown, scroll-words, zoom-image, carousel-progress, scroll-progress
 │   ├── home/                 # intro (R3F), hero, sections, pano-strip
 │   ├── pages/                # client views: directory, store, product, offers, static pages
-│   ├── ui/                   # icons, logo, dialog (native <dialog>), magnetic
+│   ├── ui/                   # icons, logo, dialog (native <dialog>, bottom sheet on phones), magnetic
+│   ├── mobile-dock.tsx · filter-panel.tsx · share-button.tsx   # phone navigation, collapsible filters, share
 │   └── providers.tsx         # locale, theme, favourites, search state
 ├── data/
 │   ├── types.ts              # Mall, Floor, Scene, Store, Product, Offer, Hotspot types
