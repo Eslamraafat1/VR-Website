@@ -20,13 +20,13 @@ export default function Countdown({ endDate, big = false }: { endDate: string; b
   const s = Math.floor(left / 1000);
   const parts: [number, string][] = [[Math.floor(s / 86400), t("offers.d")], [Math.floor((s % 86400) / 3600), t("offers.h")], [Math.floor((s % 3600) / 60), t("offers.m")], [s % 60, t("offers.s")]];
   return (
-    <div role="timer" aria-label={`${t("offers.endsIn")} ${parts.map(([n, u]) => `${n} ${u}`).join(" ")}`} className="flex items-end gap-3" dir="ltr">
+    <div className="flex"><div role="timer" aria-label={`${t("offers.endsIn")} ${parts.map(([n, u]) => `${n} ${u}`).join(" ")}`} className="flex items-end gap-3" dir="ltr">
       {parts.map(([n, u], i) => (
         <div key={i} className="text-center">
           <div className={`font-light tabular-nums leading-none text-champagne ${big ? "text-5xl md:text-7xl" : "text-xl"}`}>{num(n).padStart(2, "0")}</div>
           <div className="mono-label mt-1 !text-[10px] !text-fg3">{u}</div>
         </div>
       ))}
-    </div>
+    </div></div>
   );
 }
