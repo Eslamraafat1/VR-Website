@@ -215,7 +215,7 @@ export default function ExperienceApp() {
   };
 
   const floorScenes = getScenesByFloor(scene.floorId);
-  const iconBtn = "icon-btn xp-ui";
+  const iconBtn = "icon-btn xp-ui shrink-0 max-md:!size-10";
 
   return (
     <div ref={root} className="fixed inset-0 overflow-hidden bg-black text-fg"
@@ -229,7 +229,7 @@ export default function ExperienceApp() {
       <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black/75 to-transparent" />
 
       {/* TOP BAR */}
-      <div className="absolute inset-x-0 top-0 z-20 flex items-start justify-between gap-2 p-3 md:p-5">
+      <div className="absolute inset-x-0 top-0 z-20 flex items-start justify-between gap-2 p-3 pt-[max(0.75rem,env(safe-area-inset-top))] md:p-5">
         <div className="xp-ui flex min-w-0 flex-col gap-1.5 text-white">
           <div className="flex items-center gap-3 text-white"><Logo size={18} /></div>
           <p className="mono-label !text-white/80" aria-live="polite">
@@ -288,7 +288,7 @@ export default function ExperienceApp() {
       )}
 
       {/* BOTTOM BAR */}
-      <div className="absolute inset-x-0 bottom-0 z-20 flex flex-col gap-2 p-3 md:gap-3 md:p-5">
+      <div className="absolute inset-x-0 bottom-0 z-20 flex flex-col gap-2 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] md:gap-3 md:p-5">
         <div className="xp-ui scrollbar-none flex gap-2 overflow-x-auto" role="list" aria-label={t("xp.scenes")}>
           {floorScenes.map((s) => (
             <button key={s.id} role="listitem" onClick={() => goTo(s.id)} aria-current={s.id === sceneId}
@@ -299,23 +299,23 @@ export default function ExperienceApp() {
           ))}
         </div>
         <div className="flex items-center justify-between gap-2">
-          <div className="xp-ui flex gap-1.5" role="group" aria-label={t("xp.floors")}>
+          <div className="xp-ui flex shrink-0 gap-1" role="group" aria-label={t("xp.floors")}>
             {floors.map((f) => (
               <button key={f.id} onClick={() => f.id !== scene.floorId && goTo(FLOOR_ENTRY[f.id])} aria-pressed={f.id === scene.floorId}
-                className={`icon-btn !w-auto px-3 font-mono text-xs ${f.id === scene.floorId ? "!border-champagne !text-champagne" : ""}`} title={L(f.name)} aria-label={L(f.name)}>
+                className={`icon-btn !w-auto shrink-0 px-3 font-mono text-xs max-md:min-w-10 ${f.id === scene.floorId ? "!border-champagne !text-champagne" : ""}`} title={L(f.name)} aria-label={L(f.name)}>
                 {f.level === 0 ? "G" : f.level}<span className="ms-2 hidden sm:inline">{floorName(f.id)}</span>
               </button>
             ))}
           </div>
-          <div className="flex gap-1.5">
+          <div className="scrollbar-none flex min-w-0 gap-1 overflow-x-auto md:gap-1.5">
             <button className={`${iconBtn} hidden md:grid`} aria-pressed={miniOpen} onClick={() => setMiniOpen((m) => !m)} aria-label={t("xp.map")} title="Mini-map"><IconCompass /></button>
             <button className={iconBtn} aria-pressed={mapOpen} onClick={() => { setMapFloor(scene.floorId); setMapOpen((m) => !m); setPanel(null); }} aria-label={t("xp.map")}><IconMap /></button>
             <button className={iconBtn} aria-pressed={tourIdx !== null} data-keep-tour onClick={() => (tourIdx === null ? startTour() : stopTour())} aria-label={t("xp.tour")} title={t("xp.tour")}><IconPlay /></button>
             <button className={iconBtn} aria-pressed={soundOn} data-keep-tour onClick={toggleSound} aria-label={t("xp.sound")} title={t("xp.sound")}><IconSound /></button>
             <button className={iconBtn} aria-pressed={guideOpen} onClick={() => setGuideOpen((g) => !g)} aria-label={t("xp.guide")}><IconInfo /></button>
             <button className={`${iconBtn} md:hidden`} aria-pressed={gyroOn} onClick={toggleGyro} aria-label={t("xp.gyro")}><IconGyro /></button>
-            <button className={iconBtn} onClick={() => handle.current?.zoomOut()} aria-label={t("xp.zoomOut")}><IconMinus /></button>
-            <button className={iconBtn} onClick={() => handle.current?.zoomIn()} aria-label={t("xp.zoomIn")}><IconPlus /></button>
+            <button className={`${iconBtn} hidden md:grid`} onClick={() => handle.current?.zoomOut()} aria-label={t("xp.zoomOut")}><IconMinus /></button>
+            <button className={`${iconBtn} hidden md:grid`} onClick={() => handle.current?.zoomIn()} aria-label={t("xp.zoomIn")}><IconPlus /></button>
           </div>
         </div>
       </div>

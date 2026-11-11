@@ -8,6 +8,7 @@ import type { Product } from "@/data/types";
 import { IconHeart, IconMail, IconCube, IconArrow } from "./ui/icons";
 import { StoreLogo } from "./ui/logo";
 import ZoomImage from "./fx/zoom-image";
+import ShareButton from "./share-button";
 
 /** Small contact form (demo: validated locally, not sent anywhere). */
 function ContactStore({ storeName }: { storeName: string }) {
@@ -85,6 +86,7 @@ export default function ProductDetail({ product, layout = "split", onNavigate }:
         <div className="mt-auto flex flex-wrap gap-2">
           <Link className="btn btn-solid grow" href={`/stores/${store.slug}`} onClick={onNavigate}>{t("prod.inStore")} <IconArrow width={16} /></Link>
           <button className="btn grow" onClick={() => setContact((c) => !c)} aria-expanded={contact}><IconMail width={16} /> {t("prod.contact")}</button>
+          <ShareButton title={L(product.name)} className="btn !px-4" />
           <button className="icon-btn" style={{ width: "3rem", height: "3rem" }} aria-pressed={fav} onClick={() => toggleFavorite(product.id)} aria-label={fav ? t("prod.unfav") : t("prod.fav")} title={fav ? t("prod.unfav") : t("prod.fav")}>
             <IconHeart filled={fav} />
           </button>

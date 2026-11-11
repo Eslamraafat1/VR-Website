@@ -18,8 +18,8 @@ export default function SiteFooter() {
   );
   return (
     <footer className="border-t border-line bg-surface">
-      <div className="gutter grid gap-12 py-16 md:grid-cols-[1.6fr_1fr_1fr_1fr]">
-        <div className="max-w-sm space-y-5">
+      <div className="gutter grid grid-cols-2 gap-x-6 gap-y-10 py-12 md:grid-cols-[1.6fr_1fr_1fr_1fr] md:gap-12 md:py-16">
+        <div className="col-span-2 max-w-sm space-y-5 md:col-span-1">
           <Logo size={26} />
           <p className="mono-label !normal-case !tracking-wider">{t("brand.tagline")}</p>
           <p className="text-sm text-fg2">{t("footer.about")}</p>
@@ -28,7 +28,7 @@ export default function SiteFooter() {
         {col(t("footer.company"), [["/about", t("nav.about")], ["/contact", t("nav.contact")]])}
         {col(t("footer.legal"), [["/privacy", t("footer.privacy")], ["/terms", t("footer.terms")]])}
       </div>
-      <div className="gutter flex flex-wrap items-center justify-between gap-3 border-t border-line py-6">
+      <div className="gutter flex flex-wrap items-center justify-between gap-3 border-t border-line py-6 max-lg:pb-28">
         <span className="mono-label">{t("footer.rights")}</span>
         <span className="mono-label" dir="ltr">{mall.coordinates.lat} · {mall.coordinates.lng}</span>
       </div>

@@ -27,3 +27,8 @@ export const IconUp = (p: P) => <svg {...base(p)}><path d="m6 15 6-6 6 6" /></sv
 export const IconPhone = (p: P) => <svg {...base(p)}><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2Z" /></svg>;
 export const IconMail = (p: P) => <svg {...base(p)}><rect x="3" y="5" width="18" height="14" rx="1" /><path d="m3 7 9 6 9-6" /></svg>;
 export const IconCube = (p: P) => <svg {...base(p)}><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9Z" /><path d="m4 7.5 8 4.5 8-4.5M12 12v9" /></svg>;
+export const IconHome = (p: P) => <svg {...base(p)}><path d="M4 11 12 4l8 7v9H4Z" /><path d="M10 20v-6h4v6" /></svg>;
+export const IconBag = (p: P) => <svg {...base(p)}><path d="M5 8h14l-1 12H6Z" /><path d="M9 8V6a3 3 0 0 1 6 0v2" /></svg>;
+export const IconTag = (p: P) => <svg {...base(p)}><path d="M3 12V4h8l10 10-8 8Z" /><circle cx="7.5" cy="8.5" r="1.2" /></svg>;
+export const IconShare = (p: P) => <svg {...base(p)}><circle cx="6" cy="12" r="2.5" /><circle cx="18" cy="6" r="2.5" /><circle cx="18" cy="18" r="2.5" /><path d="m8.2 10.8 7.6-3.6M8.2 13.2l7.6 3.6" /></svg>;
+export const IconFilter = (p: P) => <svg {...base(p)}><path d="M4 6h16M7 12h10M10 18h4" /></svg>;

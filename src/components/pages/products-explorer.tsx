@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { useApp } from "@/components/providers";
 import ProductModal from "@/components/product-modal";
 import Reveal from "@/components/reveal";
+import FilterPanel from "@/components/filter-panel";
 import { Chip, PageHeader } from "./directory";
 import { ProductCard } from "./product-grid";
 import { discountPct, effectivePrice, getCategories, getProducts, getStore, getStores } from "@/data/service";
@@ -41,8 +42,8 @@ export default function ProductsExplorer() {
   return (
     <>
       <PageHeader kicker="VISTRA® / 03" title={t("prod.title")} />
-      <section className="gutter grid gap-10 py-10 lg:grid-cols-[280px_1fr]">
-        <aside className="space-y-7 lg:sticky lg:top-28 lg:self-start" aria-label="Filters">
+      <section className="gutter grid gap-6 py-6 lg:grid-cols-[280px_1fr] lg:gap-10 lg:py-10">
+        <FilterPanel active={[q, category, store !== "all", maxPrice < MAX, sale].filter(Boolean).length} count={list.length}>
           <label className="block"><span className="mono-label">{t("prod.search")}</span><input className="field" type="search" value={q} onChange={(e) => setQ(e.target.value.slice(0, 60))} /></label>
           <div><p className="mono-label mb-3">{t("dir.category")}</p><div className="flex flex-wrap gap-2"><Chip active={!category} onClick={() => setCategory(null)}>{t("cat.all")}</Chip>{getCategories().map((c) => <Chip key={c} active={category === c} onClick={() => setCategory(category === c ? null : c)}>{cat(c)}</Chip>)}</div></div>
           <label className="block"><span className="mono-label">{t("prod.store")}</span>
@@ -54,13 +55,13 @@ export default function ProductsExplorer() {
             <select className="field" value={sort} onChange={(e) => setSort(e.target.value as Sort)}>
               <option value="featured">{t("prod.sort.featured")}</option><option value="priceAsc">{t("prod.sort.priceAsc")}</option><option value="priceDesc">{t("prod.sort.priceDesc")}</option><option value="discount">{t("prod.sort.discount")}</option></select></label>
           {dirty && <button className="btn w-full" onClick={clear}>{t("dir.clear")}</button>}
-        </aside>
+        </FilterPanel>
         <div>
-          <p className="mono-label mb-6" aria-live="polite">{list.length} {t("prod.count")}</p>
+          <p className="mono-label mb-4 max-lg:hidden lg:mb-6" aria-live="polite">{list.length} {t("prod.count")}</p>
           {list.length === 0 ? (
             <div className="grid min-h-64 place-items-center border border-dashed border-line p-10 text-center"><div className="space-y-4"><p className="text-fg2">{t("prod.empty")}</p><button className="btn" onClick={clear}>{t("dir.clear")}</button></div></div>
           ) : (
-            <div className="grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3">{list.map((p, i) => <Reveal key={p.id} delay={(i % 3) * 0.05} y={24}><ProductCard product={p} onOpen={setOpen} /></Reveal>)}</div>
+            <div className="grid grid-cols-2 gap-x-3 gap-y-8 sm:gap-x-4 sm:gap-y-10 md:grid-cols-3">{list.map((p, i) => <Reveal key={p.id} delay={(i % 3) * 0.05} y={24}><ProductCard product={p} onOpen={setOpen} /></Reveal>)}</div>
           )}
         </div>
       </section>

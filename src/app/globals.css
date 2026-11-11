@@ -207,3 +207,24 @@ select.field option { background: var(--surface); color: var(--fg); }
 html[dir="rtl"] .field { background-position: 100% 100%; }
 .field:focus { background-size: 100% 1px; }
 @media (prefers-reduced-motion: reduce) { .vx-draw { animation: none; stroke-dashoffset: 0; } }
+
+/* ---------- mobile polish ---------- */
+html { -webkit-tap-highlight-color: transparent; text-size-adjust: 100%; }
+a, button, summary, input, select, textarea, label { touch-action: manipulation; }
+.vx-press { transition: transform 0.15s ease, opacity 0.15s ease; }
+.vx-press:active { transform: scale(0.95); }
+.btn:active, .icon-btn:active { transform: scale(0.97); }
+.vx-dock { padding-bottom: env(safe-area-inset-bottom); }
+@media (pointer: coarse) {
+  .field { min-height: 3rem; }
+  .icon-btn { min-width: 2.75rem; }
+}
+.vx-rise { animation: vx-rise 0.5s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes vx-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@media (max-width: 767px) {
+  dialog.vx-sheet[open] { animation: vx-sheet 0.35s cubic-bezier(.2,.8,.2,1); }
+  dialog.vx-sheet::backdrop { animation: vx-fade 0.3s ease; }
+}
+@keyframes vx-sheet { from { transform: translateY(100%); } to { transform: none; } }
+@keyframes vx-fade { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .vx-rise, dialog.vx-sheet[open], dialog.vx-sheet::backdrop { animation: none; } }

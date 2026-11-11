@@ -11,7 +11,8 @@ export default function GoldDust({ className = "" }: { className?: string }) {
     if (!c || prefersReducedMotion()) return;
     const ctx = c.getContext("2d");
     if (!ctx) return;
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const small = window.matchMedia("(max-width: 640px)").matches;
+    const dpr = Math.min(window.devicePixelRatio || 1, small ? 1.5 : 2);
     let w = 0, h = 0, raf = 0, visible = true;
     const mouse = { x: -999, y: -999 };
     type P = { x: number; y: number; r: number; vx: number; vy: number; a: number; ph: number };
@@ -20,7 +21,7 @@ export default function GoldDust({ className = "" }: { className?: string }) {
       w = c.clientWidth; h = c.clientHeight;
       c.width = w * dpr; c.height = h * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const n = Math.round(Math.min(90, (w * h) / 16000));
+      const n = Math.round(Math.min(small ? 36 : 90, (w * h) / 16000));
       ps = Array.from({ length: n }, () => ({ x: Math.random() * w, y: Math.random() * h, r: 0.6 + Math.random() * 1.8, vx: (Math.random() - 0.5) * 0.15, vy: -0.1 - Math.random() * 0.3, a: 0.25 + Math.random() * 0.6, ph: Math.random() * 6.28 }));
     };
     const tick = (t: number) => {

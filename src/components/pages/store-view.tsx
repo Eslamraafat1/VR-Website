@@ -10,6 +10,7 @@ import { PortalLink } from "@/components/portal";
 import { IconArrow, IconCube, IconMail, IconPhone } from "@/components/ui/icons";
 import { Chip } from "./directory";
 import Parallax from "@/components/fx/parallax";
+import ShareButton from "@/components/share-button";
 import GoldDust from "@/components/fx/gold-dust";
 import { ProductCard } from "./product-grid";
 import { effectivePrice, getOffersByStore, getProductsByStore, getScene, getStores } from "@/data/service";
@@ -87,8 +88,9 @@ export default function StoreView({ store }: { store: Store }) {
           <a className="hover:text-champagne" href={store.socialLinks.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
           <a className="hover:text-champagne" href={store.socialLinks.x} target="_blank" rel="noopener noreferrer">X</a></div></div>
       </section>
-      <section className="gutter py-10">
-        <PortalLink href={`/experience?scene=${store.sceneId}&store=${store.id}`} className="btn btn-solid !min-h-14 !px-8" data-cursor="enter"><IconCube width={18} /> {t("store.enter360")} <IconArrow width={16} /></PortalLink>
+      <section className="gutter flex flex-wrap gap-3 py-10">
+        <PortalLink href={`/experience?scene=${store.sceneId}&store=${store.id}`} className="btn btn-solid !min-h-14 grow !px-8 sm:grow-0" data-cursor="enter"><IconCube width={18} /> {t("store.enter360")} <IconArrow width={16} /></PortalLink>
+        <ShareButton title={store.name} className="btn !min-h-14 !px-6" />
       </section>
 
       {/* ---------- offers ---------- */}
@@ -110,8 +112,8 @@ export default function StoreView({ store }: { store: Store }) {
       <section className="gutter py-12" aria-labelledby="cat">
         <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <h2 id="cat" className="display-m" style={{ textTransform: th.upper ? "uppercase" : undefined }}>{t("store.catalog")}</h2>
-          <div className="flex flex-wrap items-center gap-3">
-            <input className="field !w-48" type="search" value={q} onChange={(e) => setQ(e.target.value.slice(0, 40))} placeholder={t("prod.search")} aria-label={t("prod.search")} />
+          <div className="flex w-full flex-wrap items-center gap-3 sm:w-auto">
+            <input className="field !w-full sm:!w-48" type="search" value={q} onChange={(e) => setQ(e.target.value.slice(0, 40))} placeholder={t("prod.search")} aria-label={t("prod.search")} />
             <Chip active={sale} onClick={() => setSale(!sale)}>{t("prod.onSale")}</Chip>
           </div>
         </div>

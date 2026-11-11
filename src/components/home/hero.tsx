@@ -76,7 +76,7 @@ export default function Hero() {
           <PanoStrip src="/panoramas/atrium.jpg" className="h-44 border border-line" />
         </div>
       </div>
-      <div className="hero-fade gutter relative z-10 flex items-center justify-between pb-6">
+      <div className="hero-fade gutter relative z-10 flex items-center justify-between pb-6 max-lg:pb-20">
         <span className="mono-label flex items-center gap-3"><span className="relative block h-10 w-px overflow-hidden bg-line"><span className="absolute inset-x-0 top-0 h-4 animate-[scrolldot_1.8s_ease-in-out_infinite] bg-champagne" /></span>{t("hero.scroll")}</span>
         <span className="mono-label hidden sm:block">VISTRA® — 2026</span>
       </div>

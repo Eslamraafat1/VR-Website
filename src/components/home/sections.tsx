@@ -12,6 +12,7 @@ import OfferCard from "@/components/offer-card";
 import PanoStrip from "./pano-strip";
 import CountUp from "@/components/fx/count-up";
 import Spotlight from "@/components/fx/spotlight";
+import CarouselProgress from "@/components/fx/carousel-progress";
 import { getCategories, getExperiences, getFloors, getMall, getOffers, getScenes, getStores } from "@/data/service";
 import { prefersReducedMotion, registerGsap } from "@/lib/gsap";
 
@@ -68,7 +69,7 @@ export function ExploreSection() {
 }
 
 /* ---------------- C. Discover the stores ---------------- */
-const TILE = ["md:col-span-7 md:row-span-2 aspect-[4/5] md:aspect-auto md:min-h-[34rem]", "md:col-span-5 aspect-[4/3]", "md:col-span-5 aspect-[4/3]", "md:col-span-4 aspect-[4/5]", "md:col-span-4 aspect-[4/5]", "md:col-span-4 aspect-[4/5]", "md:col-span-8 aspect-[4/3] md:aspect-[16/9]", "md:col-span-4 aspect-[4/5]"];
+const TILE = ["max-md:col-span-2 md:col-span-7 md:row-span-2 aspect-[4/3] md:aspect-auto md:min-h-[34rem]", "md:col-span-5 aspect-[4/5] md:aspect-[4/3]", "md:col-span-5 aspect-[4/5] md:aspect-[4/3]", "md:col-span-4 aspect-[4/5]", "md:col-span-4 aspect-[4/5]", "md:col-span-4 aspect-[4/5]", "md:col-span-8 aspect-[4/5] md:aspect-[16/9]", "max-md:col-span-2 md:col-span-4 aspect-[16/10] md:aspect-[4/5]"];
 
 export function StoresSection() {
   const { t, cat } = useApp();
@@ -77,16 +78,16 @@ export function StoresSection() {
     <section className="py-24 md:py-36" aria-labelledby="stores-title">
       <SectionHead kicker={t("stores.kicker")} title={t("stores.title")} action={<Link href="/stores" className="btn" data-cursor="discover">{t("stores.all")} <IconArrow width={16} /></Link>} />
       <h2 id="stores-title" className="sr-only">{t("stores.title")}</h2>
-      <div className="gutter grid gap-3 md:grid-cols-12 md:gap-4">
+      <div className="gutter grid grid-cols-2 gap-2.5 md:grid-cols-12 md:gap-4">
         {tiles.map(({ c, store }, i) => (
           <Reveal key={c} className={`${TILE[i]}`} delay={(i % 3) * 0.08}>
             <Spotlight><Link href={`/stores?category=${c}`} data-cursor="view" className="group relative block h-full w-full overflow-hidden bg-surface" aria-label={`${cat(c)} — ${store.name}`}>
               <LivingImage src={store.coverImage} alt="" className="absolute inset-0 transition-[clip-path] duration-700 [clip-path:inset(0_0_0_0)] group-hover:[clip-path:inset(4%_4%_4%_4%)]" />
               <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/30" />
               <span className="mono-label absolute start-4 top-4 !text-white" dir="ltr"><span className="inline-block transition-transform duration-500 group-hover:-translate-y-0.5">{String(i + 1).padStart(2, "0")}</span> / 08</span>
-              <div className="absolute inset-x-0 bottom-0 p-5 text-white md:p-7">
-                <p className="mono-label translate-y-3 !text-champagne opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">{store.name}</p>
-                <h3 className="display-m !text-3xl md:!text-4xl">{cat(c)}</h3>
+              <div className="absolute inset-x-0 bottom-0 p-3.5 text-white sm:p-5 md:p-7">
+                <p className="mono-label hidden translate-y-3 !text-champagne opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 md:block">{store.name}</p>
+                <h3 className="display-m !text-2xl md:!text-4xl">{cat(c)}</h3>
                 <p className="mono-label mt-3 flex items-center gap-2 !text-white/80">{t("stores.view")} <IconArrow width={14} className="transition-transform group-hover:translate-x-1" /></p>
               </div>
             </Link></Spotlight>
@@ -104,10 +105,10 @@ export function ExperiencesSection() {
     <section className="py-24 md:py-36" aria-labelledby="exp-title">
       <SectionHead kicker={t("exp.kicker")} title={t("exp.title")} />
       <h2 id="exp-title" className="sr-only">{t("exp.title")}</h2>
-      <div className="scrollbar-none gutter flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4">
+      <CarouselProgress className="scrollbar-none gutter flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-px-4 pb-2 md:gap-4">
         {getExperiences().map((e, i) => (
           <Link key={e.id} href={`/experience?scene=${e.sceneId}`} data-cursor="explore" style={{ ["--tone" as string]: e.tone }}
-            className="group relative block h-[62vh] min-h-[420px] w-[78vw] shrink-0 snap-start overflow-hidden border border-line sm:w-[46vw] lg:w-[30vw]">
+            className="group relative block h-[58svh] min-h-[400px] w-[82vw] shrink-0 snap-start overflow-hidden border border-line sm:w-[46vw] lg:w-[30vw]">
             <img src={e.image} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110" />
             <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
             <div aria-hidden className="absolute inset-x-0 bottom-0 h-1 origin-start scale-x-0 bg-[var(--tone)] transition-transform duration-700 group-hover:scale-x-100" style={{ transformOrigin: "left" }} />
@@ -119,7 +120,7 @@ export function ExperiencesSection() {
             </div>
           </Link>
         ))}
-      </div>
+      </CarouselProgress>
     </section>
   );
 }

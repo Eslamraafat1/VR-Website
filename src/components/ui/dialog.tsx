@@ -22,7 +22,7 @@ export default function Dialog({ open, onClose, label, children, wide }: { open:
       aria-label={label}
       onClose={onClose}
       onClick={(e) => { if (e.target === ref.current) onClose(); }}
-      className={`m-auto w-[min(96vw,${wide ? "1100px" : "760px"})] max-h-[92vh] overflow-auto border border-line bg-bg p-0 text-fg backdrop:bg-black/70 backdrop:backdrop-blur-sm`}
+      className="vx-sheet m-auto max-h-[92dvh] w-full overflow-auto overscroll-contain border border-line bg-bg p-0 text-fg backdrop:bg-black/70 backdrop:backdrop-blur-sm max-md:mb-0 max-md:mt-auto max-md:max-h-[90dvh] max-md:!w-full max-md:max-w-none max-md:border-x-0 max-md:border-b-0"
       style={{ width: `min(96vw, ${wide ? 1100 : 760}px)` }}
     >
       {open && (

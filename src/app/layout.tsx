@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: { type: "website", siteName: SITE_NAME, title: "VISTRA® — Enter the experience", description: SITE_DESCRIPTION, url: "/", images: [{ url: "/images/mall/hero.jpg", width: 1920, height: 1080, alt: "VISTRA virtual mall" }] },
   twitter: { card: "summary_large_image" },
 };
-export const viewport: Viewport = { themeColor: "#090b10", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = { themeColor: "#090b10", width: "device-width", initialScale: 1, viewportFit: "cover" };
 
 // Runs before paint: applies the saved theme / language to <html> to prevent flashing.
 const bootScript = `try{var d=document.documentElement,t=localStorage.getItem('vistra.theme'),l=localStorage.getItem('vistra.locale');if(t==='light'||t==='dark')d.dataset.theme=t;if(l==='ar'){d.lang='ar';d.dir='rtl'}}catch(e){}`;
