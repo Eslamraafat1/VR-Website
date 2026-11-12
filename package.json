@@ -9,7 +9,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
     "@photo-sphere-viewer/core": "^5.15.1",
@@ -33,5 +34,12 @@
     "eslint-config-next": "16.4.4",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "license": "MIT",
+  "author": "Eslam Raafat <eslamraafat736@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eslamraafat1/vr-website.git"
+  },
+  "homepage": "https://github.com/Eslamraafat1/vr-website#readme"
 }
